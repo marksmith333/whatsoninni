@@ -88,16 +88,16 @@
 
   {
   "id":"armagh-2026-01-29-MaggieMenopause",
-  "title": "Maggie’s Menopause",
+  "title": "Maggies Menopause",
   "summary": "Hilarious play about Maggies trevails.",
   "description": "Comedy",
   "start":"2026-01-29T20:00:00",
-  "category": "Theatre",
+  "end":"2026-01-29T22:30:00",
   "county": "Armagh",
   "town": "Armagh City",
   "venue": "Armagh Market Place Theatre",
-  "free": "No",
-  "emoji": "🎭"
+  "category":"Theatre",
+  "free": false
 }
   ]
 }
