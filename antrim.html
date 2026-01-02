@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antrim events — whatsoninni.com</title>
+  <meta name="description" content="Events in County Antrim, Northern Ireland." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="county" data-county="Antrim">
+  <div class="header">
+    <div class="container nav">
+      <div class="brand">
+        <b><a href="index.html">whatsoninni.com</a></b>
+        <span>County Antrim</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="submit.html">Submit event</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Events in Antrim</h1>
+      <p>Upcoming events happening across County Antrim.</p>
+    </div>
+
+    <div class="panel">
+      <div class="grid">
+        <div class="col-12">
+          <input id="search" class="input" placeholder="Search Antrim events…" />
+        </div>
+        <div class="col-6">
+          <select id="category"></select>
+        </div>
+        <div class="col-6">
+          <select id="dateFilter">
+            <option value="all">Any date</option>
+            <option value="today">Today</option>
+            <option value="weekend">This weekend</option>
+            <option value="month">Next 30 days</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="small" id="resultsCount">Loading…</div>
+      <div class="cards" id="eventCards"></div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> whatsoninni.com · <a href="privacy.html">Privacy</a></div>
+    </div>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
