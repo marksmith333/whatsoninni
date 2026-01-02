@@ -38,9 +38,38 @@
       "county": "Down",
       "town": "Hillsborough",
       "venue": "Main Street",
-      "category": "Entertainment",
+      "category": "Music",
       "free": true
     },
+
+    {
+  "id": "down-2026-01-05-quiz-night",
+  "title": "Monday Night Pub Quiz",
+  "summary": "Weekly quiz night with prizes.",
+  "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
+  "start": "2026-02-06T20:30:00",
+  "end": "2026-02-06T22:30:00",
+  "county": "Down",
+  "town": "Hillsborough",
+  "venue": "The Hillside Pub",
+  "category": "Quiz",
+  "free": true,
+  "contact": "Gerry on 0789998888"
+},
+
+{
+  "id": "down-2026-01-07-trad-session",
+  "title": "Traditional Music Session",
+  "summary": "Live Irish traditional music session.",
+  "description": "An open traditional music session featuring local musicians. All welcome.",
+  "start": "2026-01-07T20:30:00",
+  "end": "2026-01-07T22:30:00",
+  "county": "Down",
+  "town": "Hillsborough",
+  "venue": "Hillside Pub",
+  "category": "Traditional Music",
+  "free": true
+},
       
     {
       "id": "antrim-2026-01-25-market",
