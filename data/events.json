@@ -84,6 +84,27 @@
       "category": "Markets",
       "free": true,
       "url": "https://example.com"
+    }, 
+
+  {
+  "id":"armagh-2026-01-29-MaggieMenopause",
+  "title": "Maggie’s Menopause",
+  "category": "Theatre 🎭",
+  "county": "Armagh",
+  "town": "Armagh",
+  "venue": "Armagh Market Place Theatre",
+  "dates": [
+    {
+      "date": "2026-01-29",
+      "time": "7:30pm"
+    },
+    {
+      "date": "2026-01-30",
+      "time": "7:30pm"
     }
+  ],
+  "description": "A hilarious and heartfelt stage comedy that takes an honest, laugh-out-loud look at menopause, friendship, and life’s unexpected changes.",
+  "emoji": "🎭"
+}
   ]
 }
