@@ -1,0 +1,361 @@
+<!-- armagh.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>What’s On In NI — Armagh</title>
+  <meta name="description" content="What’s on in County Armagh — gigs, plays, quizzes, family days and more." />
+  <style>
+    :root{
+      --bg:#f7f7fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --accent2:#16a34a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+    }
+    header{
+      background:linear-gradient(135deg, #ffffff, #f0f6ff);
+      border-bottom:1px solid var(--line);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px}
+    .brand{
+      display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    }
+    .brand h1{margin:0;font-size:22px}
+    .brand .tag{color:var(--muted);font-size:14px}
+    nav{
+      margin-top:12px;
+      display:flex;gap:8px;flex-wrap:wrap;
+    }
+    nav a{
+      text-decoration:none;
+      font-size:14px;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:10px;
+      color:var(--text);
+    }
+    nav a.active{
+      border-color:var(--accent);
+      color:var(--accent);
+      font-weight:600;
+    }
+    .controls{
+      margin-top:14px;
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+    }
+    .pill{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .pill.active{
+      border-color:var(--accent2);
+      color:var(--accent2);
+      font-weight:600;
+    }
+    .search{
+      flex:1 1 260px;
+      display:flex;align-items:center;gap:8px;
+      border:1px solid var(--line);
+      background:#fff;border-radius:999px;
+      padding:8px 12px;
+    }
+    .search input{
+      border:0;outline:0;width:100%;
+      font-size:14px;background:transparent;
+    }
+    main .wrap{padding-top:14px;padding-bottom:26px}
+    .meta{color:var(--muted);font-size:14px;margin:10px 0 16px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+    }
+    .card{
+      grid-column: span 12;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+    @media (min-width:720px){
+      .card{grid-column: span 6;}
+    }
+    @media (min-width:980px){
+      .card{grid-column: span 4;}
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 0}
+    .badge{
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background:#fff;
+    }
+    .badge.cat{border-color:#dbeafe;background:#eff6ff;color:#1d4ed8}
+    .badge.county{border-color:#dcfce7;background:#f0fdf4;color:#166534}
+    .where{color:var(--muted);font-size:14px;margin-top:8px}
+    .desc{color:#374151;font-size:14px;line-height:1.35;margin-top:10px}
+    .links{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+    .links a{
+      font-size:14px;text-decoration:none;
+      color:var(--accent);
+      border-bottom:1px dashed rgba(37,99,235,.35);
+    }
+    footer{
+      border-top:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+    }
+    .error{
+      background:#fff;
+      border:1px solid #fecaca;
+      color:#991b1b;
+      padding:12px 14px;
+      border-radius:14px;
+      margin:12px 0;
+    }
+    .empty{
+      background:#fff;
+      border:1px dashed var(--line);
+      padding:14px;
+      border-radius:16px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1>What’s On In NI</h1>
+      <div class="tag">County pages • Armagh</div>
+    </div>
+
+    <nav aria-label="County navigation">
+      <a href="index.html">All</a>
+      <a href="antrim.html">Antrim</a>
+      <a class="active" href="armagh.html">Armagh</a>
+      <a href="derry.html">Derry</a>
+      <a href="down.html">Down</a>
+      <a href="fermanagh.html">Fermanagh</a>
+      <a href="tyrone.html">Tyrone</a>
+    </nav>
+
+    <div class="controls">
+      <div class="search" role="search" aria-label="Search events">
+        🔎 <input id="searchInput" type="search" placeholder="Search Armagh events (title, venue, town)…" />
+      </div>
+
+      <!-- Category pills (with your emojis) -->
+      <button class="pill active" data-cat="All" type="button">✨ All</button>
+      <button class="pill" data-cat="Traditional Music" type="button">🎻 Traditional</button>
+      <button class="pill" data-cat="Music" type="button">🎵 Music</button>
+      <button class="pill" data-cat="Quiz" type="button">❓ Quiz</button>
+      <button class="pill" data-cat="Family" type="button">🧒 Family</button>
+      <button class="pill" data-cat="Play" type="button">🎭 Play</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="meta" id="metaText">Loading events for Armagh…</div>
+    <div id="errorBox" class="error" style="display:none;"></div>
+
+    <div id="eventsGrid" class="grid" aria-live="polite"></div>
+    <div id="emptyBox" class="empty" style="display:none;">
+      No events match your filters yet. Try “All” or clear your search.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Contact: <a href="mailto:marksmith33@yahoo.com">marksmith33@yahoo.com</a></div>
+    <div style="margin-top:6px;">© What’s On In NI</div>
+  </div>
+</footer>
+
+<script>
+  // ---- Config ----
+  const COUNTY = "Armagh";
+  const EVENTS_URL = "events.json"; // keep same as your current site format
+
+  // ---- State ----
+  let allEvents = [];
+  let activeCategory = "All";
+  let searchTerm = "";
+
+  // ---- Helpers ----
+  function safeText(v){ return (v ?? "").toString().trim(); }
+
+  function parseDateISO(dateStr){
+    // Expecting YYYY-MM-DD
+    const s = safeText(dateStr);
+    const d = new Date(s);
+    return isNaN(d.getTime()) ? null : d;
+  }
+
+  function formatDate(d){
+    try {
+      return d.toLocaleDateString("en-GB", { weekday:"short", day:"2-digit", month:"short", year:"numeric" });
+    } catch {
+      return "";
+    }
+  }
+
+  function matchesCategory(ev){
+    if (activeCategory === "All") return true;
+    // support either `category` (string) or `categories` (array)
+    const c = ev.category;
+    const cs = Array.isArray(ev.categories) ? ev.categories : null;
+    if (typeof c === "string") return c.trim() === activeCategory;
+    if (cs) return cs.map(x => safeText(x)).includes(activeCategory);
+    return false;
+  }
+
+  function matchesSearch(ev){
+    if (!searchTerm) return true;
+    const hay = [
+      ev.title, ev.venue, ev.town, ev.description, ev.category, ev.county
+    ].map(safeText).join(" ").toLowerCase();
+    return hay.includes(searchTerm.toLowerCase());
+  }
+
+  function isCountyArmagh(ev){
+    return safeText(ev.county) === COUNTY;
+  }
+
+  function normalizeEvent(raw){
+    // Keep flexible with your JSON format, but map commonly used fields.
+    return {
+      title: safeText(raw.title || raw.name),
+      date: safeText(raw.date),
+      time: safeText(raw.time || raw.startTime),
+      venue: safeText(raw.venue),
+      town: safeText(raw.town || raw.location),
+      county: safeText(raw.county),
+      category: safeText(raw.category),
+      description: safeText(raw.description),
+      url: safeText(raw.url || raw.website || raw.link)
+    };
+  }
+
+  function render(events){
+    const grid = document.getElementById("eventsGrid");
+    const empty = document.getElementById("emptyBox");
+    const meta = document.getElementById("metaText");
+
+    grid.innerHTML = "";
+
+    meta.textContent = `${events.length} event${events.length === 1 ? "" : "s"} in ${COUNTY}` +
+      (activeCategory !== "All" ? ` • ${activeCategory}` : "") +
+      (searchTerm ? ` • search: "${searchTerm}"` : "");
+
+    if (!events.length){
+      empty.style.display = "block";
+      return;
+    }
+    empty.style.display = "none";
+
+    for (const ev of events){
+      const d = parseDateISO(ev.date);
+      const dateLabel = d ? formatDate(d) : (ev.date || "Date TBC");
+      const timeLabel = ev.time ? ` • ${ev.time}` : "";
+
+      const cat = ev.category || "Event";
+      const where = [ev.venue, ev.town].filter(Boolean).join(", ");
+
+      const card = document.createElement("article");
+      card.className = "card";
+      card.innerHTML = `
+        <h3>${ev.title || "Untitled event"}</h3>
+        <div class="row">
+          <span class="badge cat">${cat}</span>
+          <span class="badge county">${COUNTY}</span>
+          <span class="badge">${dateLabel}${timeLabel}</span>
+        </div>
+        ${where ? `<div class="where">📍 ${where}</div>` : ""}
+        ${ev.description ? `<div class="desc">${ev.description}</div>` : ""}
+        ${ev.url ? `<div class="links"><a href="${ev.url}" target="_blank" rel="noopener">More info</a></div>` : ""}
+      `;
+      grid.appendChild(card);
+    }
+  }
+
+  function applyFilters(){
+    const upcoming = allEvents
+      .filter(isCountyArmagh)
+      .filter(matchesCategory)
+      .filter(matchesSearch)
+      .sort((a,b) => {
+        const da = parseDateISO(a.date);
+        const db = parseDateISO(b.date);
+        // Put invalid dates at the end
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return da - db;
+      });
+
+    render(upcoming);
+  }
+
+  // ---- UI wiring ----
+  document.getElementById("searchInput").addEventListener("input", (e) => {
+    searchTerm = e.target.value.trim();
+    applyFilters();
+  });
+
+  document.querySelectorAll(".pill").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".pill").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeCategory = btn.dataset.cat || "All";
+      applyFilters();
+    });
+  });
+
+  // ---- Load events ----
+  (async function init(){
+    const errorBox = document.getElementById("errorBox");
+    try{
+      const res = await fetch(EVENTS_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Could not load ${EVENTS_URL} (HTTP ${res.status})`);
+      const data = await res.json();
+
+      // Support either a top-level array, or { events: [...] }
+      const arr = Array.isArray(data) ? data : (Array.isArray(data.events) ? data.events : []);
+      allEvents = arr.map(normalizeEvent);
+
+      applyFilters();
+    }catch(err){
+      errorBox.style.display = "block";
+      errorBox.textContent = `Error loading events: ${err.message}`;
+      document.getElementById("metaText").textContent = `Couldn’t load events for ${COUNTY}.`;
+    }
+  })();
+</script>
+</body>
+</html>
