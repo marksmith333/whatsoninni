@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "id": "derry-2026-01-10-trad-session",
+      "title": "Traditional Music Session Night",
+      "summary": "Live trad session with local musicians.",
+      "description": "Drop in for an evening of traditional music. All welcome — bring an instrument or just enjoy the tunes.",
+      "start": "2026-01-10T19:30:00",
+      "end": "2026-01-10T22:30:00",
+      "county": "Derry",
+      "town": "Derry/Londonderry",
+      "venue": "City Centre Pub",
+      "category": "Music",
+      "free": true,
+      "url": "https://example.com"
+    },
+    {
+      "id": "down-2026-01-18-family-walk",
+      "title": "Family Nature Walk",
+      "summary": "Guided walk suitable for kids.",
+      "description": "A relaxed guided walk with nature facts and mini activities for children. Wrap up warm!",
+      "start": "2026-01-18T11:00:00",
+      "end": "2026-01-18T12:30:00",
+      "county": "Down",
+      "town": "Hillsborough",
+      "venue": "Forest Park Entrance",
+      "category": "Family",
+      "free": true,
+      "url": "https://example.com"
+    },
+    {
+      "id": "antrim-2026-01-25-market",
+      "title": "Weekend Craft & Food Market",
+      "summary": "Local makers, street food and hot drinks.",
+      "description": "Browse handmade gifts and grab a bite from local traders. Dogs welcome (on lead).",
+      "start": "2026-01-25T10:00:00",
+      "end": "2026-01-25T15:00:00",
+      "county": "Antrim",
+      "town": "Belfast",
+      "venue": "Market Hall",
+      "category": "Markets",
+      "free": true,
+      "url": "https://example.com"
+    }
+  ]
+}
