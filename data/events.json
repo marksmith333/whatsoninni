@@ -28,6 +28,20 @@
       "free": true,
       "url": "https://example.com"
     },
+        {
+      "id": "down-2026-01-02-hillsideMusic",
+      "title": "Friday night music",
+      "summary": "Music to wash away the new year blues.",
+      "description": "Music",
+      "start": "2026-01-02T21:00:00",
+      "end": "2026-01-02T23:00:00",
+      "county": "Down",
+      "town": "Hillsborough",
+      "venue": "Main Street",
+      "category": "Entertainment",
+      "free": true
+    },
+      
     {
       "id": "antrim-2026-01-25-market",
       "title": "Weekend Craft & Food Market",
