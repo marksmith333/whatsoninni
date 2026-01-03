@@ -113,5 +113,19 @@
   "free": true,
   "contact": "Be there."
 },
+{
+  "id": "tyrone-2026-01-25-titan-night",
+  "title": "Titan arrives home.",
+  "summary": "Come meet Titan and marvel at his aura.",
+  "description": "Test your manliness against the ultimate stallion.",
+  "start": "2026-01-25T20:30:00",
+  "end": "2026-01-25T22:30:00",
+  "county": "Tyrone",
+  "town": "Omagh",
+  "venue": "Townview",
+  "category": "Manliness",
+  "free": true,
+  "contact": "Ray on 0789998888"
+}
   ]
 }
