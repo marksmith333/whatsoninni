@@ -133,18 +133,12 @@ a{color:inherit;text-decoration:none}
 
 .sponsor {
   text-align: center;
-  margin: 30px 0;
-}
-
-.sponsor-label {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 8px;
+  margin: 24px 0;
 }
 
 .sponsor-logo {
   max-width: 140px;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
