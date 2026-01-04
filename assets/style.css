@@ -131,6 +131,22 @@ a{color:inherit;text-decoration:none}
 @media(max-width:980px){.county-tiles{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:520px){.county-tiles{grid-template-columns:repeat(2,1fr)}}
 
+.sponsor {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.sponsor-label {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.sponsor-logo {
+  max-width: 200px;
+  height: auto;
+}
+
 .tile{
   padding:14px;
   border-radius:14px;
