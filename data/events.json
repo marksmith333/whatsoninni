@@ -141,6 +141,20 @@
   "category": "Pop Culture",
   "free": true,
   "contact": "Larry on 0789998888"
-}
+},
+{
+  "id": "antrim-2026-01-09-mccarthy-mortgagepaid",
+  "title": "Chris McCarthy becomes mortgage free.",
+  "summary":"He's free to do what he wants, any old time.",
+  "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
+  "start": "2026-01-09T20:30:00",
+  "end": "2026-01-09T22:30:00",
+  "county": "Antrim",
+  "town": "Belfast",
+  "venue": "River Cottage",
+  "category": "Freedom",
+  "free": true,
+  "contact": "Gerry on 0789998888"
+},
   ]
 }
