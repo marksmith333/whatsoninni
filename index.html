@@ -3,77 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>whatsoninni.com — Events across Northern Ireland</title>
-  <meta name="description" content="Find events across Northern Ireland: Antrim, Armagh, Derry, Down, Fermanagh and Tyrone." />
+
+  <title>What’s On In Northern Ireland — Events by County</title>
+  <meta name="description" content="Find events across Northern Ireland, organised by county: Antrim, Armagh, Derry, Down, Fermanagh and Tyrone." />
+
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#ffffff">
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="What’s On NI">
-<link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="What’s On NI">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
 
-<script src="/pwa.js" defer></script>
+  <script src="/pwa.js" defer></script>
 </head>
-<body data-page="home">
-  <div class="header">
-    <div class="container nav">
-      <div class="brand">
-        <b><a href="index.html">whatsoninni.com</a></b>
-        <span>Events across Northern Ireland (6 counties)</span>
-      </div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="submit.html">Submit event</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="hero">
-      <h1>What’s on in NI</h1>
-      <p>Search events across <b>Antrim</b>, <b>Armagh</b>, <b>Derry</b>, <b>Down</b>, <b>Fermanagh</b> and <b>Tyrone</b>.</p>
-    </div>
+<body>
 
-    <div class="panel">
-      <div class="grid">
-        <div class="col-12">
-          <input id="search" class="input" placeholder="Search events (e.g., music, market, Hillsborough…)" />
-        </div>
-        <div class="col-4">
-          <select id="county"></select>
-        </div>
-        <div class="col-4">
-          <select id="category"></select>
-        </div>
-        <div class="col-4">
-          <select id="dateFilter">
-            <option value="all">Any date</option>
-            <option value="today">Today</option>
-            <option value="weekend">This weekend</option>
-            <option value="month">Next 30 days</option>
-          </select>
-        </div>
-      </div>
+  <!-- Header -->
+  <header class="site-header">
+    <h1>What’s On In Northern Ireland</h1>
+    <p class="tagline">Events, music, theatre, quizzes & family fun</p>
+  </header>
 
-      <div class="hr"></div>
+  <!-- County Navigation -->
+  <nav class="county-nav">
+    <ul>
+      <li><a href="antrim.html">Antrim</a></li>
+      <li><a href="armagh.html">Armagh</a></li>
+      <li><a href="derry.html">Derry</a></li>
+      <li><a href="down.html">Down</a></li>
+      <li><a href="fermanagh.html">Fermanagh</a></li>
+      <li><a href="tyrone.html">Tyrone</a></li>
+    </ul>
+  </nav>
 
-      <div class="small" id="resultsCount">Loading…</div>
-      <div class="cards" id="eventCards"></div>
-    </div>
+  <!-- Main Content -->
+  <main class="homepage-content">
+    <section class="intro">
+      <h2>Choose a county</h2>
+      <p>
+        Browse upcoming events by county across Northern Ireland.
+        From live music 🎵 and traditional sessions 🎻 to quizzes ❓ and family events 👶.
+      </p>
+    </section>
 
-    <div class="panel">
-      <h2 style="margin:0 0 8px 0">Browse by county</h2>
-      <div class="county-tiles" id="countyTiles"></div>
-    </div>
+    <section class="county-grid">
+      <a class="county-card" href="antrim.html">Antrim</a>
+      <a class="county-card" href="armagh.html">Armagh</a>
+      <a class="county-card" href="derry.html">Derry</a>
+      <a class="county-card" href="down.html">Down</a>
+      <a class="county-card" href="fermanagh.html">Fermanagh</a>
+      <a class="county-card" href="tyrone.html">Tyrone</a>
+    </section>
+  </main>
 
-    <div class="footer">
-      <div>© <span id="y"></span> whatsoninni.com · <a href="privacy.html">Privacy</a></div>
-    </div>
-  </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      Contact:
+      <a href="mailto:marksmith33@yahoo.com">marksmith33@yahoo.com</a>
+    </p>
+    <p class="small-text">
+      © What’s On NI
+    </p>
+  </footer>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  <script src="assets/app.js"></script>
 </body>
 </html>
