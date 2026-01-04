@@ -7,17 +7,32 @@
   <meta name="description" content="Upcoming events in County Down, Northern Ireland." />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="What’s On NI">
-  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="What’s On NI">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
 
-  <script src="/pwa.js" defer></script>
+<script src="/pwa.js" defer></script>
 </head>
 
-<body data-page="county" data-county="Down">
+<section class="county-sponsor">
+  <span class="sponsor-label">Sponsored by</span>
 
+  <a href="https://www.hillsidehillsborough.co.uk"
+     target="_blank"
+     rel="noopener">
+  <!--  <img src="images/sponsors/hillside-hillsborough.png" -->
+         alt="The Hillside Hillsborough – Hillsborough’s Oldest Pub Since 1752">
+  </a>
+
+  <p class="sponsor-tagline">
+    <strong>The Hillside Hillsborough</strong> —
+    Hillsborough’s oldest pub, since 1752.
+  </p>
+</section>
+
+<body data-page="county" data-county="Down">
   <div class="header">
     <div class="container nav">
       <div class="brand">
@@ -43,30 +58,12 @@
     <div class="hero">
       <h1>Events in Down</h1>
       <p>Upcoming events happening across County Down.</p>
-
-      <!-- Sponsor placed directly under heading -->
-      <section class="county-sponsor">
-        <span class="sponsor-label">Sponsored by</span>
-
-        <a href="https://www.hillsidehillsborough.co.uk"
-           target="_blank"
-           rel="noopener"
-           aria-label="The Hillside Hillsborough – Hillsborough’s Oldest Pub Since 1752">
-          <!-- Link only – no image -->
-        </a>
-
-        <p class="sponsor-tagline">
-          <strong>The Hillside Hillsborough</strong> —
-          Hillsborough’s oldest pub, since 1752.
-        </p>
-      </section>
     </div>
 
     <div class="panel">
       <div class="grid">
         <div class="col-12">
-          <input id="search" class="input"
-                 placeholder="Search Down events (e.g., Hillsborough, Bangor, market…)" />
+          <input id="search" class="input" placeholder="Search Down events (e.g., Hillsborough, Bangor, market…)" />
         </div>
 
         <div class="col-6">
@@ -109,9 +106,7 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script src="assets/app.js"></script>
 </body>
 </html>
