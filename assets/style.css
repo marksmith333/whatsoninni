@@ -267,3 +267,44 @@ select:focus{
 .footer a:hover{
   text-decoration:underline;
 }
+
+/* --- Header icon: stop it breaking the county layout --- */
+
+/* Reserve space on the right so text/links don't sit under the icon */
+.header .nav{
+  padding-right:56px;          /* space for pint */
+}
+
+/* Keep the icon pinned neatly */
+.header .nav-icon{
+  top:12px;
+  right:12px;
+}
+
+/* If your existing HTML has <br><br> inside .links, hide them */
+.header .links br{
+  display:none;
+}
+
+/* If your existing HTML wraps Submit/Contact in a <div>, flatten it */
+.header .links > div{
+  display:contents;
+}
+
+/* Make sure county links flow nicely on mobile */
+.header .links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 16px;
+  align-items:center;
+}
+
+/* Slightly smaller icon on tiny screens */
+@media (max-width:360px){
+  .header .nav{
+    padding-right:48px;
+  }
+  .header .nav-icon img{
+    width:24px;
+  }
+}
