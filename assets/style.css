@@ -1,253 +1,243 @@
-:root{
-  --bg:#f7f9fc;
-  --card:#ffffff;
-  --muted:#64748b;
-  --text:#0f172a;
-  --accent:#2563eb;     /* blue */
-  --accent2:#16a34a;    /* green */
-  --border:#e5e7eb;
+/* ================================
+   What’s On NI – Clean pub theme
+   ================================ */
+
+:root {
+  --bg: #f6f8fb;
+  --surface: rgba(255, 255, 255, 0.95);
+  --text: #0f172a;
+  --muted: #475569;
+
+  --primary: #0ea5e9;
+  --primary-dark: #0284c7;
+  --accent: #22c55e;
+
+  --border: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 10px 25px rgba(2, 8, 23, 0.08);
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
 
-a{color:inherit;text-decoration:none}
-  /* keep your existing font/margins if you already set them */
-  background:
-    /* soft wash so text stays readable */
-    linear-gradient(rgba(246, 248, 251, 0.92), rgba(246, 248, 251, 0.92)),
-    url("../images/sponsors/pintofbeer.JPG");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   Body with resized pint background
+   ================================ */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+
+  background-color: var(--bg);
+
+  background-image:
+    /* soft wash for readability */
+    linear-gradient(
+      rgba(246, 248, 251, 0.92),
+      rgba(246, 248, 251, 0.92)
+    ),
+    /* decorative pint */
+    url("/images/backgrounds/pintofbeer.JPG");
 
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: cover;
-  background-attachment: fixed;
+
+  background-position:
+    center,
+    right 8% center;
+
+  /* 👇 controls pint size */
+  background-size:
+    cover,
+    320px auto;
+
+  background-attachment:
+    scroll,
+    fixed;
 }
 
-/* Layout */
-.container{max-width:1100px;margin:0 auto;padding:18px}
-.header{
-  position:sticky;top:0;z-index:50;
-  background:#ffffff;
-  border-bottom:1px solid var(--border);
-}
-.nav{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-
-/* Brand */
-.brand b{
-  font-size:20px;
-  color:var(--accent);
-}
-.brand span{
-  font-size:13px;
-  color:var(--muted);
-}
-
-/* Navigation */
-.links{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-.links a{
-  padding:8px 12px;
-  border-radius:10px;
-  color:var(--text);
-}
-.links a:hover{
-  background:#f1f5f9;
-}
-
-/* Hero */
-.hero{
-  padding:22px 0 8px 0;
-}
-.hero h1{
-  margin:0;
-  font-size:34px;
-}
-.hero p{
-  margin-top:10px;
-  color:var(--muted);
-  max-width:70ch;
-}
-
-/* Panels */
-.panel{
-  margin-top:18px;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:16px;
-}
-
-/* Grid */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:12px;
-}
-.col-12{grid-column:span 12}
-.col-6{grid-column:span 6}
-.col-4{grid-column:span 4}
-@media(max-width:860px){
-  .col-6,.col-4{grid-column:span 12}
-  .hero h1{font-size:28px}
-}
-
-/* Inputs */
-.input, select{
-  width:100%;
-  padding:12px 14px;
-  border-radius:12px;
-  border:1px solid var(--border);
-  background:#ffffff;
-  font-size:15px;
-}
-.input:focus, select:focus{
-  outline:none;
-  border-color:var(--accent);
-}
-
-/* Buttons */
-.btn{
-  display:inline-block;
-  padding:12px 16px;
-  border-radius:12px;
-  background:var(--accent);
-  color:#ffffff;
-  border:none;
-  cursor:pointer;
-}
-.btn:hover{
-  background:#1d4ed8;
-}
-
-/* County tiles */
-.county-tiles{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:12px;
-}
-@media(max-width:980px){.county-tiles{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:520px){.county-tiles{grid-template-columns:repeat(2,1fr)}}
-
-.sponsor {
-  text-align: center;
-  margin: 24px 0;
-}
-
-.sponsor-logo {
-  max-width: 140px;
-  width: auto;
-  height: auto;
-}
-
+/* Mobile adjustments */
 @media (max-width: 600px) {
-  .sponsor-logo {
-    max-width: 110px;
+  body {
+    background-size:
+      cover,
+      200px auto;
+
+    background-position:
+      center,
+      right -40px center;
   }
 }
 
-.tile{
-  padding:14px;
-  border-radius:14px;
-  border:1px solid var(--border);
-  background:#ffffff;
-  transition:all .15s ease;
-}
-.tile:hover{
-  border-color:var(--accent2);
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-}
-.tile b{
-  display:block;
-  font-size:16px;
-}
-.tile span{
-  font-size:13px;
-  color:var(--muted);
+/* ================================
+   Layout
+   ================================ */
+main,
+.container {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  padding: 18px 0 44px;
 }
 
-/* Event cards */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:14px;
-  margin-top:12px;
-}
-.card{
-  grid-column:span 6;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background:#ffffff;
-  transition:transform .15s ease, box-shadow .15s ease;
-}
-@media(max-width:860px){.card{grid-column:span 12}}
-.card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 18px rgba(0,0,0,.08);
-}
-.card .body{padding:16px}
+/* ================================
+   Header / navigation
+   ================================ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
-/* Badges */
-.badges{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-.badge{
-  font-size:12px;
-  padding:5px 10px;
-  border-radius:999px;
-  background:#f1f5f9;
-  color:#334155;
-}
-.badge.accent{
-  background:#dcfce7;
-  color:#166534;
-}
-.badge.blue{
-  background:#dbeafe;
-  color:#1e40af;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 165, 233, 0.15),
+    rgba(34, 197, 94, 0.12)
+  );
+
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
-/* Meta */
-.meta{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  color:var(--muted);
-  font-size:13px;
-  margin-top:6px;
-}
-.small{color:var(--muted);font-size:13px}
-
-/* Footer */
-.footer{
-  margin-top:28px;
-  padding:18px 0;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:13px;
+header nav,
+header .container {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  padding: 14px 0;
 }
 
-/* Misc */
-.hr{height:1px;background:var(--border);margin:16px 0}
-.notice{
-  background:#f8fafc;
-  border:1px dashed var(--border);
-  padding:14px;
-  border-radius:14px;
-  color:var(--muted);
+/* ================================
+   Typography
+   ================================ */
+h1, h2, h3 {
+  margin: 14px 0 10px;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(26px, 3vw, 34px);
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   Event cards / sections
+   ================================ */
+.card,
+.event,
+.event-card,
+section,
+li.event {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 14px;
+  margin-bottom: 14px;
+}
+
+/* Lists */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* ================================
+   Buttons / pills
+   ================================ */
+button,
+.button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: linear-gradient(
+    180deg,
+    var(--primary),
+    var(--primary-dark)
+  );
+
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.22);
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+/* ================================
+   Sponsor section
+   ================================ */
+.county-sponsor {
+  margin: 16px 0 20px;
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(249, 115, 22, 0.12),
+    rgba(14, 165, 233, 0.12)
+  );
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.county-sponsor img {
+  height: 44px;
+  width: auto;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 560px) {
+  .county-sponsor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ================================
+   Footer
+   ================================ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 0;
+  color: var(--muted);
 }
