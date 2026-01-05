@@ -8,35 +8,89 @@
   --border:#e5e7eb;
 }
 
+<<<<<<< HEAD
+*{ box-sizing:border-box; }
+
+html, body{ height:100%; }
+
+=======
 *{
   box-sizing:border-box;
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
   color:var(--text);
 
+<<<<<<< HEAD
+  /* subtle faded pint background */
+=======
   /* faded pint background */
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
   background:
-    linear-gradient(
-      rgba(247,249,252,0.94),
-      rgba(247,249,252,0.94)
-    ),
-    url("../images/sponsors/pint of beer.JPG");
-
+<<<<<<< HEAD
+    linear-gradient(rgba(247,249,252,0.94), rgba(247,249,252,0.94)),
+    url("../images/sponsors/pint%20of%20beer.JPG");
   background-repeat:no-repeat;
   background-position:right center;
   background-size:cover;
   background-attachment:fixed;
 }
+=======
+    linear-gradient(
+      rgba(247,249,252,0.94),
+      rgba(247,249,252,0.94)
+    ),
+    url("../images/sponsors/pint of beer.JPG");
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
+<<<<<<< HEAD
+/* iOS/mobile: fixed backgrounds often look bad */
+@media (max-width: 860px){
+  body{
+    background-attachment:scroll;
+    background-position:right top;
+  }
+=======
+  background-repeat:no-repeat;
+  background-position:right center;
+  background-size:cover;
+  background-attachment:fixed;
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
+}
+
+<<<<<<< HEAD
+a{
+  color:inherit;
+  text-decoration:none;
+}
+a:hover{ text-decoration:none; }
+
+=======
 a{
   color:inherit;
   text-decoration:none;
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 /* Layout */
+<<<<<<< HEAD
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:16px;
+}
+
+/* Header / nav (works even if your HTML is just <nav><a>) */
+header, .header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:saturate(180%) blur(10px);
+=======
 .container{
   max-width:1100px;
   margin:0 auto;
@@ -48,28 +102,47 @@ a{
   top:0;
   z-index:50;
   background:#ffffff;
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
   border-bottom:1px solid var(--border);
 }
+<<<<<<< HEAD
+
+nav, .nav{
+=======
 
 .nav{
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
   display:flex;
-  gap:12px;
+  gap:10px;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
   flex-wrap:wrap;
+  padding:12px 16px;
 }
 
-/* Brand */
+nav a, .links a{
+  padding:8px 10px;
+  border-radius:10px;
+  color:var(--accent);
+  font-weight:600;
+}
+nav a:hover, .links a:hover{
+  background:#eef2ff;
+}
+
+/* Brand (if present) */
 .brand b{
-  font-size:20px;
+  font-size:18px;
   color:var(--accent);
 }
 
 .brand span{
-  font-size:13px;
+  font-size:12px;
   color:var(--muted);
 }
 
+<<<<<<< HEAD
+=======
 /* Navigation */
 .links{
   display:flex;
@@ -86,31 +159,51 @@ a{
   background:#f1f5f9;
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 /* Hero */
 .hero{
+<<<<<<< HEAD
+  padding:14px 0 6px;
+=======
   padding:22px 0 8px;
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 }
 
 .hero h1{
   margin:0;
   font-size:34px;
+  letter-spacing:-0.02em;
 }
 
 .hero p{
-  margin-top:10px;
+  margin:10px 0 0;
   color:var(--muted);
   max-width:70ch;
 }
 
+/* Tighten mobile spacing (your screenshot has too much empty space) */
+@media (max-width: 520px){
+  .container{ padding:12px; }
+  .hero{ padding:10px 0 4px; }
+  .hero h1{ font-size:28px; }
+}
+
 /* Panels */
 .panel{
-  margin-top:18px;
+  margin-top:14px;
   background:var(--card);
   border:1px solid var(--border);
   border-radius:16px;
-  padding:16px;
+  padding:14px;
 }
 
+<<<<<<< HEAD
+/* Grid helpers */
+.grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:12px; }
+.col-12{ grid-column:span 12; }
+.col-6{ grid-column:span 6; }
+.col-4{ grid-column:span 4; }
+=======
 /* Grid */
 .grid{
   display:grid;
@@ -122,42 +215,54 @@ a{
 .col-6{grid-column:span 6}
 .col-4{grid-column:span 4}
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 @media(max-width:860px){
-  .col-6,.col-4{grid-column:span 12}
-  .hero h1{font-size:28px}
+  .col-6,.col-4{ grid-column:span 12; }
 }
 
 /* Inputs */
+<<<<<<< HEAD
+.input, select, input[type="text"], input[type="search"]{
+=======
 .input,
 select{
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
   width:100%;
   padding:12px 14px;
   border-radius:12px;
   border:1px solid var(--border);
-  background:#ffffff;
+  background:#fff;
   font-size:15px;
 }
+<<<<<<< HEAD
+.input:focus, select:focus, input:focus{
+=======
 
 .input:focus,
 select:focus{
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
   outline:none;
   border-color:var(--accent);
 }
 
 /* Buttons */
-.btn{
+.btn, button{
   display:inline-block;
   padding:12px 16px;
   border-radius:12px;
   background:var(--accent);
-  color:#ffffff;
+  color:#fff;
   border:none;
   cursor:pointer;
 }
+<<<<<<< HEAD
+.btn:hover, button:hover{ background:#1d4ed8; }
+=======
 
 .btn:hover{
   background:#1d4ed8;
 }
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
 /* County tiles */
 .county-tiles{
@@ -165,7 +270,14 @@ select:focus{
   grid-template-columns:repeat(6,1fr);
   gap:12px;
 }
+<<<<<<< HEAD
+@media(max-width:980px){ .county-tiles{ grid-template-columns:repeat(3,1fr); } }
+@media(max-width:520px){ .county-tiles{ grid-template-columns:repeat(2,1fr); } }
+=======
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
+<<<<<<< HEAD
+=======
 @media(max-width:980px){
   .county-tiles{grid-template-columns:repeat(3,1fr)}
 }
@@ -174,11 +286,12 @@ select:focus{
   .county-tiles{grid-template-columns:repeat(2,1fr)}
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 .tile{
   padding:14px;
   border-radius:14px;
   border:1px solid var(--border);
-  background:#ffffff;
+  background:#fff;
   transition:all .15s ease;
 }
 
@@ -186,6 +299,10 @@ select:focus{
   border-color:var(--accent2);
   box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
+<<<<<<< HEAD
+.tile b{ display:block; font-size:16px; color:var(--text); }
+.tile span{ font-size:13px; color:var(--muted); }
+=======
 
 .tile b{
   display:block;
@@ -196,7 +313,11 @@ select:focus{
   font-size:13px;
   color:var(--muted);
 }
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
+<<<<<<< HEAD
+/* Event cards (and a generic fallback for whatever markup you’re using) */
+=======
 /* Sponsor */
 .sponsor{
   text-align:center;
@@ -213,6 +334,7 @@ select:focus{
 }
 
 /* Event cards */
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 .cards{
   display:grid;
   grid-template-columns:repeat(12,1fr);
@@ -224,19 +346,32 @@ select:focus{
   grid-column:span 6;
   border-radius:16px;
   border:1px solid var(--border);
-  background:#ffffff;
+  background:#fff;
   transition:transform .15s ease, box-shadow .15s ease;
 }
+<<<<<<< HEAD
+@media(max-width:860px){ .card{ grid-column:span 12; } }
+=======
 
 @media(max-width:860px){
   .card{grid-column:span 12}
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 .card:hover{
   transform:translateY(-2px);
   box-shadow:0 8px 18px rgba(0,0,0,.08);
 }
+<<<<<<< HEAD
+.card .body{ padding:16px; }
+=======
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
+<<<<<<< HEAD
+/* Generic “nice card” styling for any event blocks even if they’re not .card */
+main > section, main > article, .panel > div{
+  border-radius:16px;
+=======
 .card .body{
   padding:16px;
 }
@@ -246,8 +381,15 @@ select:focus{
   display:flex;
   gap:8px;
   flex-wrap:wrap;
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 }
+<<<<<<< HEAD
 
+/* Badges */
+.badges{ display:flex; gap:8px; flex-wrap:wrap; }
+=======
+
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 .badge{
   font-size:12px;
   padding:5px 10px;
@@ -255,6 +397,10 @@ select:focus{
   background:#f1f5f9;
   color:#334155;
 }
+<<<<<<< HEAD
+.badge.accent{ background:#dcfce7; color:#166534; }
+.badge.blue{ background:#dbeafe; color:#1e40af; }
+=======
 
 .badge.accent{
   background:#dcfce7;
@@ -265,6 +411,7 @@ select:focus{
   background:#dbeafe;
   color:#1e40af;
 }
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
 /* Meta */
 .meta{
@@ -275,28 +422,44 @@ select:focus{
   font-size:13px;
   margin-top:6px;
 }
+<<<<<<< HEAD
+.small{ color:var(--muted); font-size:13px; }
+=======
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 
+<<<<<<< HEAD
+/* Sponsor */
+.sponsor{ text-align:center; margin:24px 0; }
+.sponsor-logo{ max-width:140px; height:auto; }
+@media(max-width:600px){ .sponsor-logo{ max-width:110px; } }
+
+=======
 .small{
   color:var(--muted);
   font-size:13px;
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 /* Footer */
 .footer{
-  margin-top:28px;
-  padding:18px 0;
+  margin-top:24px;
+  padding:16px 0;
   border-top:1px solid var(--border);
   color:var(--muted);
   font-size:13px;
 }
 
 /* Misc */
+<<<<<<< HEAD
+.hr{ height:1px; background:var(--border); margin:16px 0; }
+=======
 .hr{
   height:1px;
   background:var(--border);
   margin:16px 0;
 }
 
+>>>>>>> edd84fbd7b458db8b5cc86d40b086f4e21896a86
 .notice{
   background:#f8fafc;
   border:1px dashed var(--border);
