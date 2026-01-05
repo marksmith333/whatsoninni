@@ -1,324 +1,279 @@
-/* =========================================================
-   PubsNI — assets/style.css (full rewrite)
-   - Mobile-first
-   - Clean header/nav
-   - Top-right pint icon
-   - Tight wrap spacing (no big gap between nav rows)
-   - Submit event + Contact stay together on same row
-   ========================================================= */
+/* =========================
+   ROOT + RESET
+========================= */
 
-/* -------------------------------
-   Base + Reset
--------------------------------- */
-*{ box-sizing:border-box; }
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e5e7eb;
+  --accent:#2563eb;
+}
+
+*{
+  box-sizing:border-box;
+}
 
 html, body{
   margin:0;
   padding:0;
-  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-  color:#0f172a;
-  background:#f7f9fc;
 }
 
-/* -------------------------------
-   Layout helpers
--------------------------------- */
-.container{
-  max-width:980px;
-  margin:0 auto;
-  padding:0 16px;
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.4;
 }
 
-.small{ font-size:0.85rem; color:#64748b; }
+/* =========================
+   HEADER / BRAND
+========================= */
 
-.hr{
-  height:1px;
-  background:#e5e7eb;
-  margin:16px 0;
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
 }
 
-/* -------------------------------
-   Header / Navigation
--------------------------------- */
-.header{
-  background:#ffffff;
-  border-bottom:1px solid #e5e7eb;
-}
-
-.nav{
-  position:relative;
+.header-inner{
   display:flex;
-  flex-direction:column;
-  padding:14px 0 12px 0;
-
-  /* reserve space so links never run under the icon */
-  padding-right:56px;
-}
-
-/* Brand */
-.brand{
-  display:flex;
-  align-items:baseline;
-  gap:10px;
-}
-
-.brand a{
-  color:#2563eb;
-  text-decoration:none;
-  font-weight:700;
-  font-size:1.25rem;
-  line-height:1.2;
-}
-
-.brand span{
-  font-size:0.95rem;
-  color:#0f172a;
-  font-weight:600;
-}
-
-/* Links */
-.links{
-  display:flex;
-  flex-wrap:wrap;
   align-items:center;
-
-  /* tighten spacing so rows don't look far apart */
-  row-gap:6px;
-  column-gap:16px;
-
-  margin-top:8px;
+  justify-content:space-between;
+  padding:12px 16px 6px;
 }
 
-/* Neutralise legacy layout quirks if present in HTML */
-.links br{ display:none; }
-.links > div{ display:contents; }
+.brand{
+  text-decoration:none;
+  color:inherit;
+}
 
-.links a{
+.brand-name{
+  font-size:20px;
+  font-weight:800;
+  color:var(--accent);
+}
+
+.brand-sub{
+  display:block;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.site-icon{
+  width:28px;
+  height:28px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.main-nav{
+  padding:6px 16px 12px;
+}
+
+.main-nav a{
   text-decoration:none;
   font-weight:600;
-  color:#2563eb;
-  font-size:0.95rem;
-  white-space:nowrap; /* prevents awkward breaks */
-}
-
-.links a:hover{ text-decoration:underline; }
-
-/* Keep Submit + Contact together, and nudge them to the end */
-.links a[href="submit.html"],
-.links a[href="contact.html"]{
+  color:var(--accent);
+  margin-right:12px;
   white-space:nowrap;
 }
 
-.links a[href="submit.html"]{
-  margin-left:auto; /* pushes submit+contact to the right as a pair */
+.main-nav a[aria-current="page"]{
+  text-decoration:underline;
 }
 
-/* Pint icon (top-right) */
-.nav-icon{
-  position:absolute;
-  top:12px;
-  right:12px;
-  z-index:2;
+/* secondary row: Submit + Contact */
+.nav-secondary{
+  display:flex;
+  gap:14px;
+  margin-top:6px;
 }
 
-.nav-icon img{
-  width:26px;
-  height:auto;
-  opacity:0.95;
-}
+/* =========================
+   PAGE LAYOUT
+========================= */
 
-.nav-icon img:active{ transform:scale(0.95); }
-
-/* Desktop nav */
-@media (min-width:768px){
-  .nav{
-    flex-direction:row;
-    align-items:flex-end;
-    padding-right:64px;
-  }
-
-  .links{
-    margin-top:0;
-    margin-left:24px;
-    row-gap:8px;
-    column-gap:18px;
-  }
-}
-
-/* Tiny screens: slightly smaller icon + a touch less reserved space */
-@media (max-width:360px){
-  .nav{ padding-right:48px; }
-  .nav-icon img{ width:24px; }
-  .links{ column-gap:12px; }
-}
-
-/* -------------------------------
-   Hero
--------------------------------- */
-.hero{
-  padding:28px 0 18px 0;
-}
-
-.hero h1{
-  font-size:1.9rem;
-  margin:0 0 6px 0;
-  letter-spacing:-0.02em;
-}
-
-.hero p{
-  font-size:1rem;
-  color:#475569;
-  margin:0;
-}
-
-/* -------------------------------
-   Panels
--------------------------------- */
-.panel{
-  background:#ffffff;
-  border-radius:12px;
+.container{
   padding:16px;
-  margin-bottom:16px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+  max-width:900px;
+  margin:0 auto;
 }
 
-/* -------------------------------
-   Forms / Filters
--------------------------------- */
+.page-hero h1{
+  font-size:32px;
+  margin:10px 0 4px;
+}
+
+.page-hero p{
+  margin:0 0 14px;
+  color:var(--muted);
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+  display:grid;
+  gap:10px;
+  margin-bottom:16px;
+}
+
 .input,
-select{
+.select{
   width:100%;
   padding:12px 14px;
   border-radius:10px;
-  border:1px solid #d1d5db;
-  font-size:0.95rem;
-  background:#ffffff;
+  border:1px solid var(--border);
+  font-size:16px;
 }
 
-.input:focus,
-select:focus{
-  outline:none;
-  border-color:#2563eb;
-}
-
-/* Basic grid helpers if used */
-.grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.col-12{ width:100%; }
-.col-6{ width:100%; }
-
-@media (min-width:640px){
-  .col-6{ width:calc(50% - 6px); }
-}
-
-/* -------------------------------
-   Event Cards
--------------------------------- */
-.cards{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
+/* =========================
+   CARDS / EVENTS
+========================= */
 
 .card{
-  background:#ffffff;
-  border-radius:12px;
+  background:var(--card);
+  border-radius:14px;
   padding:14px;
-  border:1px solid #e5e7eb;
+  border:1px solid var(--border);
 }
 
-.card h3{
-  margin:8px 0 6px 0;
-  font-size:1.05rem;
+.results-count{
+  margin-bottom:10px;
+  color:var(--muted);
+  font-weight:600;
 }
 
-.meta{
+.events-list{
+  display:grid;
+  gap:14px;
+}
+
+.event-card{
+  background:#fff;
+  border-radius:14px;
+  padding:14px;
+  border:1px solid var(--border);
+}
+
+.event-tags{
   display:flex;
-  flex-direction:column;
-  gap:4px;
-  font-size:0.85rem;
-  color:#475569;
-}
-
-/* -------------------------------
-   Badges
--------------------------------- */
-.badges{
-  display:flex;
-  gap:6px;
+  gap:8px;
+  margin-bottom:6px;
   flex-wrap:wrap;
 }
 
-.badge{
-  font-size:0.7rem;
-  padding:4px 8px;
+.tag{
+  padding:6px 10px;
   border-radius:999px;
-  font-weight:600;
-  background:#e5e7eb;
-  color:#0f172a;
+  font-size:13px;
+  font-weight:700;
 }
 
-.badge.blue{
-  background:#dbeafe;
-  color:#1e40af;
+.tag-county{ background:#e0ecff; color:#1d4ed8; }
+.tag-category{ background:#dcfce7; color:#166534; }
+.tag-free{ background:#f1f5f9; color:#334155; }
+
+.event-title{
+  font-size:20px;
+  font-weight:800;
+  margin:6px 0;
 }
 
-.badge.accent{
-  background:#dcfce7;
-  color:#166534;
+.event-meta{
+  color:var(--muted);
+  font-size:15px;
 }
 
-/* -------------------------------
-   Buttons
--------------------------------- */
-.btn{
-  display:inline-block;
-  padding:10px 14px;
-  border-radius:10px;
-  background:#2563eb;
-  color:#ffffff;
-  text-decoration:none;
-  font-size:0.9rem;
-  font-weight:600;
+.event-desc{
+  margin-top:6px;
+  color:#334155;
 }
 
-.btn:hover{ opacity:0.9; }
+/* =========================
+   SPONSOR
+========================= */
 
-/* -------------------------------
-   Notices
--------------------------------- */
-.notice{
-  background:#fff7ed;
-  border:1px solid #fed7aa;
-  color:#9a3412;
-  padding:12px 14px;
-  border-radius:10px;
-}
-
-/* -------------------------------
-   Footer
--------------------------------- */
-.footer{
-  margin:28px 0 20px 0;
-  font-size:0.85rem;
-  color:#64748b;
+.county-sponsor{
+  margin:16px 0;
   text-align:center;
 }
 
-/* force Submit + Contact onto their own line */
-.nav-secondary{
-  display: flex;
-  gap: 12px;
-  margin-top: 6px;
+.sponsor-label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px;
 }
 
-.footer a{
-  color:#2563eb;
+.county-sponsor img{
+  max-width:200px;
+  height:auto;
+}
+
+/* =========================
+   BROWSE OTHER COUNTIES
+========================= */
+
+.browse-counties{
+  margin:26px 0 12px;
+}
+
+.browse-counties h2{
+  margin:0 0 10px;
+  font-size:24px;
+}
+
+.county-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.county-links a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#f1f5f9;
+  border:1px solid var(--border);
+  font-weight:700;
+  text-decoration:none;
+  color:#0f172a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  margin-top:30px;
+  padding:16px;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:var(--muted);
+}
+
+.site-footer a{
+  color:var(--accent);
   text-decoration:none;
 }
 
-.footer a:hover{ text-decoration:underline; }
+/* =========================
+   MOBILE POLISH
+========================= */
+
+@media (max-width:480px){
+  .page-hero h1{
+    font-size:28px;
+  }
+
+  .brand-name{
+    font-size:18px;
+  }
+}
