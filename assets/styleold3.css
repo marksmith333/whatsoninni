@@ -1,11 +1,10 @@
 /* =========================================
    What’s On NI — Colourful, clean theme
-   Works with any simple HTML structure
    ========================================= */
 
 :root {
   --bg: #f8fafc;
-  --surface: rgba(255, 255, 255, 0.96);
+  --surface: #ffffff;
 
   --text: #1e293b;
   --muted: #475569;
@@ -21,56 +20,43 @@
   --shadow: 0 10px 25px rgba(2, 8, 23, 0.08);
 }
 
-/* =========================
+/* =========================================
    Reset & base
-   ========================= */
-* { box-sizing: border-box; }
+   ========================================= */
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef2f7 100%
+  );
   color: var(--text);
   line-height: 1.6;
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
 }
 
-/* =========================
-   Always-visible brand colour (no header needed)
-   ========================= */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 170px;
-  z-index: -1;
-  background: linear-gradient(
-    90deg,
-    rgba(14,165,233,0.25),
-    rgba(34,197,94,0.22),
-    rgba(245,158,11,0.18)
-  );
-}
-
-/* =========================
+/* =========================================
    Layout
-   ========================= */
+   ========================================= */
 main,
-.container,
-header nav,
-header .container {
+.container {
   width: min(1000px, 92vw);
   margin: 0 auto;
+  padding: 20px 0 50px;
 }
 
-/* =========================
-   Header / nav (if present)
-   ========================= */
+/* =========================================
+   Header / navigation
+   ========================================= */
 header {
   position: sticky;
   top: 0;
@@ -81,6 +67,7 @@ header {
     rgba(14,165,233,0.18),
     rgba(34,197,94,0.15)
   );
+
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -93,16 +80,12 @@ header .container {
   padding: 14px 0;
 }
 
-/* Main spacing */
-main,
-.container {
-  padding: 20px 0 50px;
-}
-
-/* =========================
+/* =========================================
    Typography
-   ========================= */
-h1, h2, h3 {
+   ========================================= */
+h1,
+h2,
+h3 {
   margin: 14px 0 10px;
   letter-spacing: -0.02em;
 }
@@ -114,17 +97,19 @@ h1 {
 
 h2 {
   font-size: 20px;
-  color: var(--ni-blue-dark);
-  border-left: 5px solid var(--ni-blue-dark);
+  color: var(--ni-blue);
+  border-left: 5px solid var(--ni-blue);
   padding-left: 10px;
 }
 
 h3 {
   font-size: 18px;
-  color: #16a34a;
+  color: var(--ni-green);
 }
 
-p { color: var(--muted); }
+p {
+  color: var(--muted);
+}
 
 a {
   color: var(--ni-blue-dark);
@@ -137,29 +122,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   Universal “card” styling
-   Applies even if you don’t use .card/.event classes
-   ========================= */
-main > *,
-.container > *,
-body > main > *,
-body > .container > * {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 6px solid var(--ni-green);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  margin: 14px 0;
-}
-
-/* If you DO use these classes, they still look great */
+/* =========================================
+   Event cards / sections
+   ========================================= */
+section,
 .card,
 .event,
 .event-card,
-li.event,
-section {
+li.event {
   background: var(--surface);
   border: 1px solid var(--border);
   border-left: 6px solid var(--ni-green);
@@ -169,33 +139,34 @@ section {
   margin-bottom: 16px;
 }
 
-/* A bit of variation (nice even if structure differs) */
-main > *:nth-child(odd),
-.container > *:nth-child(odd),
-.event:nth-child(odd),
-section:nth-of-type(odd) {
+/* Alternating colour accent */
+section:nth-of-type(odd),
+.event:nth-child(odd) {
   border-left-color: var(--ni-blue);
 }
 
-/* =========================
+/* =========================================
    Lists
-   ========================= */
-ul { padding-left: 20px; }
-li { margin: 8px 0; }
+   ========================================= */
+ul {
+  padding-left: 20px;
+}
 
-/* =========================
+li {
+  margin: 8px 0;
+}
+
+/* =========================================
    Category pills (optional)
-   If you later add <span class="category quiz">...</span>
-   ========================= */
+   ========================================= */
 .category {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 6px;
   border: 1px solid var(--border);
-  background: #f8fafc;
 }
 
 .category.music {
@@ -218,9 +189,9 @@ li { margin: 8px 0; }
   color: #991b1b;
 }
 
-/* =========================
+/* =========================================
    Buttons
-   ========================= */
+   ========================================= */
 button,
 .button,
 .btn {
@@ -228,12 +199,17 @@ button,
   align-items: center;
   gap: 8px;
 
-  background: linear-gradient(180deg, var(--ni-blue), var(--ni-blue-dark));
+  background: linear-gradient(
+    180deg,
+    var(--ni-blue),
+    var(--ni-blue-dark)
+  );
+
   color: #ffffff;
   border: none;
   border-radius: 999px;
   padding: 10px 16px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
 
   box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);
@@ -245,9 +221,9 @@ button:hover,
   filter: brightness(1.06);
 }
 
-/* =========================
-   Sponsor section (your existing markup)
-   ========================= */
+/* =========================================
+   Sponsor section
+   ========================================= */
 .county-sponsor {
   margin: 18px 0 22px;
   padding: 14px 16px;
@@ -284,9 +260,9 @@ button:hover,
   }
 }
 
-/* =========================
+/* =========================================
    Footer
-   ========================= */
+   ========================================= */
 footer {
   margin-top: 40px;
   padding: 24px 0;
@@ -301,15 +277,15 @@ footer {
   color: var(--muted);
 }
 
-/* =========================
+/* =========================================
    Small screens
-   ========================= */
+   ========================================= */
 @media (max-width: 640px) {
-  main,
-  .container {
-    padding: 16px 0 40px;
+  h1 {
+    font-size: 26px;
   }
 
-  h1 { font-size: 26px; }
-  h2 { font-size: 18px; }
+  h2 {
+    font-size: 18px;
+  }
 }
