@@ -1,22 +1,21 @@
-const CACHE_NAME = `pwa-${self.location.hostname}-v2`;
-const BASE = new URL("./", self.location).pathname; // where this SW is hosted
+
 
 const APP_SHELL = [
-  BASE,
-  `${BASE}index.html`,
-  `${BASE}antrim.html`,
-  `${BASE}armagh.html`,
-  `${BASE}derry.html`,
-  `${BASE}down.html`,
-  `${BASE}fermanagh.html`,
-  `${BASE}tyrone.html`,
-  `${BASE}contact.html`,
-  `${BASE}submit.html`,
-  `${BASE}privacy.html`,
-  `${BASE}assets/app.js`,
-  `${BASE}assets/style.css`,
-  `${BASE}data/events.json`,
-  `${BASE}manifest.json`
+  "/",
+  "/index.html",
+  "/antrim.html",
+  "/armagh.html",
+  "/derry.html",
+  "/down.html",
+  "/fermanagh.html",
+  "/tyrone.html",
+  "/contact.html",
+  "/submit.html",
+  "/privacy.html",
+  "/assets/app.js",
+  "/assets/style.css",
+  "/data/events.json",
+  "/manifest.json"
 ];
 
 self.addEventListener("install", event => {
@@ -29,7 +28,9 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.map(key => (key !== CACHE_NAME ? caches.delete(key) : null)))
+      Promise.all(
+        keys.map(key => key !== CACHE_NAME ? caches.delete(key) : null)
+      )
     )
   );
   self.clients.claim();
@@ -38,19 +39,19 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   const req = event.request;
 
-  // HTML navigations: network first
+  // HTML pages → network first
   if (req.mode === "navigate") {
     event.respondWith(networkFirst(req));
     return;
   }
 
-  // events.json: stale while revalidate
-  if (new URL(req.url).pathname.endsWith("/data/events.json")) {
+  // events.json → stale while revalidate
+  if (req.url.includes("/data/events.json")) {
     event.respondWith(staleWhileRevalidate(req));
     return;
   }
 
-  // everything else: cache first
+  // everything else → cache first
   event.respondWith(cacheFirst(req));
 });
 
@@ -79,12 +80,10 @@ async function staleWhileRevalidate(req) {
   const cache = await caches.open(CACHE_NAME);
   const cached = await cache.match(req);
 
-  const networkFetch = fetch(req)
-    .then(res => {
-      cache.put(req, res.clone());
-      return res;
-    })
-    .catch(() => null);
+  const networkFetch = fetch(req).then(res => {
+    cache.put(req, res.clone());
+    return res;
+  }).catch(() => null);
 
   return cached || networkFetch;
 }
