@@ -1,34 +1,35 @@
-/* ================================
-   Base + Reset
-================================ */
+/* =========================================================
+   PubsNI — assets/style.css (full rewrite)
+   - Mobile-first
+   - Clean header/nav
+   - Top-right pint icon
+   - Tight wrap spacing (no big gap between nav rows)
+   - Submit event + Contact stay together on same row
+   ========================================================= */
 
-*{
-  box-sizing:border-box;
-}
+/* -------------------------------
+   Base + Reset
+-------------------------------- */
+*{ box-sizing:border-box; }
 
 html, body{
   margin:0;
   padding:0;
-  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Inter, Arial, sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
   color:#0f172a;
   background:#f7f9fc;
 }
 
-/* ================================
-   Layout Helpers
-================================ */
-
+/* -------------------------------
+   Layout helpers
+-------------------------------- */
 .container{
   max-width:980px;
   margin:0 auto;
   padding:0 16px;
 }
 
-.small{
-  font-size:0.85rem;
-  color:#64748b;
-}
+.small{ font-size:0.85rem; color:#64748b; }
 
 .hr{
   height:1px;
@@ -36,10 +37,9 @@ html, body{
   margin:16px 0;
 }
 
-/* ================================
+/* -------------------------------
    Header / Navigation
-================================ */
-
+-------------------------------- */
 .header{
   background:#ffffff;
   border-bottom:1px solid #e5e7eb;
@@ -50,80 +50,111 @@ html, body{
   display:flex;
   flex-direction:column;
   padding:14px 0 12px 0;
+
+  /* reserve space so links never run under the icon */
+  padding-right:56px;
 }
 
 /* Brand */
-.brand-link{
+.brand{
   display:flex;
-  flex-direction:column;
-  text-decoration:none;
-  color:#2563eb;
+  align-items:baseline;
+  gap:10px;
 }
 
-.brand-text{
+.brand a{
+  color:#2563eb;
+  text-decoration:none;
   font-weight:700;
   font-size:1.25rem;
   line-height:1.2;
 }
 
-.brand-sub{
-  font-size:0.85rem;
-  color:#64748b;
+.brand span{
+  font-size:0.95rem;
+  color:#0f172a;
+  font-weight:600;
 }
 
-/* Nav links */
+/* Links */
 .links{
   display:flex;
   flex-wrap:wrap;
-  gap:14px 18px;
-  margin-top:12px;
+  align-items:center;
+
+  /* tighten spacing so rows don't look far apart */
+  row-gap:6px;
+  column-gap:16px;
+
+  margin-top:8px;
 }
+
+/* Neutralise legacy layout quirks if present in HTML */
+.links br{ display:none; }
+.links > div{ display:contents; }
 
 .links a{
   text-decoration:none;
   font-weight:600;
   color:#2563eb;
   font-size:0.95rem;
+  white-space:nowrap; /* prevents awkward breaks */
 }
 
-.links a:hover{
-  text-decoration:underline;
+.links a:hover{ text-decoration:underline; }
+
+/* Keep Submit + Contact together, and nudge them to the end */
+.links a[href="submit.html"],
+.links a[href="contact.html"]{
+  white-space:nowrap;
+}
+
+.links a[href="submit.html"]{
+  margin-left:auto; /* pushes submit+contact to the right as a pair */
 }
 
 /* Pint icon (top-right) */
 .nav-icon{
   position:absolute;
-  top:14px;
-  right:0;
+  top:12px;
+  right:12px;
+  z-index:2;
 }
 
 .nav-icon img{
-  width:28px;
+  width:26px;
   height:auto;
-  opacity:0.9;
+  opacity:0.95;
 }
 
-.nav-icon img:active{
-  transform:scale(0.95);
-}
+.nav-icon img:active{ transform:scale(0.95); }
 
 /* Desktop nav */
 @media (min-width:768px){
   .nav{
     flex-direction:row;
     align-items:flex-end;
+    padding-right:64px;
   }
 
   .links{
     margin-top:0;
     margin-left:24px;
+    row-gap:8px;
+    column-gap:18px;
   }
 }
 
-/* ================================
-   Hero
-================================ */
+/* Tiny screens: slightly smaller icon + a touch less reserved space */
+@media (max-width:360px){
+  .nav{ padding-right:48px; }
+  .nav-icon img{ width:24px; }
+  .links{ column-gap:12px; }
+}
 
+/* -------------------------------
+   Hero
+-------------------------------- */
 .hero{
   padding:28px 0 18px 0;
 }
@@ -131,6 +162,7 @@ html, body{
 .hero h1{
   font-size:1.9rem;
   margin:0 0 6px 0;
+  letter-spacing:-0.02em;
 }
 
 .hero p{
@@ -139,10 +171,9 @@ html, body{
   margin:0;
 }
 
-/* ================================
+/* -------------------------------
    Panels
-================================ */
-
+-------------------------------- */
 .panel{
   background:#ffffff;
   border-radius:12px;
@@ -151,10 +182,9 @@ html, body{
   box-shadow:0 1px 3px rgba(0,0,0,0.06);
 }
 
-/* ================================
+/* -------------------------------
    Forms / Filters
-================================ */
-
+-------------------------------- */
 .input,
 select{
   width:100%;
@@ -171,10 +201,23 @@ select:focus{
   border-color:#2563eb;
 }
 
-/* ================================
-   Event Cards
-================================ */
+/* Basic grid helpers if used */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
 
+.col-12{ width:100%; }
+.col-6{ width:100%; }
+
+@media (min-width:640px){
+  .col-6{ width:calc(50% - 6px); }
+}
+
+/* -------------------------------
+   Event Cards
+-------------------------------- */
 .cards{
   display:flex;
   flex-direction:column;
@@ -201,10 +244,9 @@ select:focus{
   color:#475569;
 }
 
-/* ================================
+/* -------------------------------
    Badges
-================================ */
-
+-------------------------------- */
 .badges{
   display:flex;
   gap:6px;
@@ -217,6 +259,7 @@ select:focus{
   border-radius:999px;
   font-weight:600;
   background:#e5e7eb;
+  color:#0f172a;
 }
 
 .badge.blue{
@@ -229,10 +272,9 @@ select:focus{
   color:#166534;
 }
 
-/* ================================
+/* -------------------------------
    Buttons
-================================ */
-
+-------------------------------- */
 .btn{
   display:inline-block;
   padding:10px 14px;
@@ -244,14 +286,22 @@ select:focus{
   font-weight:600;
 }
 
-.btn:hover{
-  opacity:0.9;
+.btn:hover{ opacity:0.9; }
+
+/* -------------------------------
+   Notices
+-------------------------------- */
+.notice{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  color:#9a3412;
+  padding:12px 14px;
+  border-radius:10px;
 }
 
-/* ================================
+/* -------------------------------
    Footer
-================================ */
-
+-------------------------------- */
 .footer{
   margin:28px 0 20px 0;
   font-size:0.85rem;
@@ -264,47 +314,4 @@ select:focus{
   text-decoration:none;
 }
 
-.footer a:hover{
-  text-decoration:underline;
-}
-
-/* --- Header icon: stop it breaking the county layout --- */
-
-/* Reserve space on the right so text/links don't sit under the icon */
-.header .nav{
-  padding-right:56px;          /* space for pint */
-}
-
-/* Keep the icon pinned neatly */
-.header .nav-icon{
-  top:12px;
-  right:12px;
-}
-
-/* If your existing HTML has <br><br> inside .links, hide them */
-.header .links br{
-  display:none;
-}
-
-/* If your existing HTML wraps Submit/Contact in a <div>, flatten it */
-.header .links > div{
-  display:contents;
-}
-
-/* Make sure county links flow nicely on mobile */
-.header .links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px 16px;
-  align-items:center;
-}
-
-/* Slightly smaller icon on tiny screens */
-@media (max-width:360px){
-  .header .nav{
-    padding-right:48px;
-  }
-  .header .nav-icon img{
-    width:24px;
-  }
-}
+.footer a:hover{ text-decoration:underline; }
