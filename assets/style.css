@@ -309,6 +309,13 @@ select:focus{
   text-align:center;
 }
 
+/* force Submit + Contact onto their own line */
+.nav-secondary{
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
 .footer a{
   color:#2563eb;
   text-decoration:none;
