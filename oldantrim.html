@@ -5,20 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Antrim events — pubsni.com</title>
   <meta name="description" content="Upcoming events in County Antrim, Northern Ireland." />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/style.css?v=1004" />
+  <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff">
 
-  <!-- PWA -->
-  <link rel="manifest" href="icons/manifest.json" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="Pubs NI" />
-  <link rel="apple-touch-icon" href="icons/pubsniicon.PNG" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pubs NI">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
 
-  <!-- Scripts -->
-  <script src="pwa.js" defer></script>
-  <script src="assets/app.js" defer></script>
+<script src="/pwa.js" defer></script>
 </head>
 
 <body data-page="county" data-county="Antrim">
@@ -30,25 +25,22 @@
       </div>
 
       <div class="links">
-        <div class="nav-primary">
-          <a href="index.html">Home</a>
-          <a href="antrim.html" aria-current="page">Antrim</a>
-          <a href="armagh.html">Armagh</a>
-          <a href="derry.html">Derry</a>
-          <a href="down.html">Down</a>
-          <a href="fermanagh.html">Fermanagh</a>
-          <a href="tyrone.html">Tyrone</a>
-        </div>
-
-        <div class="nav-secondary">
-          <a href="submit.html">Submit event</a>
-          <a href="contact.html">Contact</a>
-        </div>
+        <a href="index.html">Home</a>
+        <br><br>
+        <a href="antrim.html">Antrim</a>
+        <a href="armagh.html">Armagh</a
+        <a href="derry.html">Derry</a>
+        <a href="down.html">Down</a>
+        <a href="fermanagh.html">Fermanagh</a>
+        <a href="tyrone.html">Tyrone</a>
+        <br><br>
+        <div><a href="submit.html">Submit Event</a>
+        <a href="contact.html">Contact</a></div>
       </div>
 
       <div class="nav-icon">
-        <img src="icons/pubsniicon.PNG" alt="PubsNI" />
-      </div>
+  <img src="icons/pubsniicon.PNG" alt="PubsNI">
+</div>
     </div>
   </div>
 
@@ -104,8 +96,7 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
