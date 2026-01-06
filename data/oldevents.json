@@ -1,0 +1,121 @@
+{
+  "events": [
+    {
+      "id": "derry-2026-01-10-trad-session",
+      "title": "Traditional Music Session Night",
+      "summary": "Live trad session with local musicians.",
+      "description": "Drop in for an evening of traditional music. All welcome — bring an instrument or just enjoy the tunes.",
+      "start": "2026-01-10T19:30:00",
+      "end": "2026-01-10T22:30:00",
+      "county": "Derry",
+      "town": "Derry/Londonderry",
+      "venue": "City Centre Pub",
+      "category": "Traditional Music",
+      "free": true,
+      "url": "https://example.com"
+    },
+    {
+      "id": "down-2026-01-09-hillsideMusic",
+      "title": "Hillside Friday night music",
+      "summary": "Call in for some Friday night live music",
+      "description": "Music",
+      "start": "2026-01-09T21:00:00",
+      "end": "2026-01-09T23:00:00",
+      "county": "Down",
+      "town": "Hillsborough",
+      "venue": "Main Street",
+      "category": "Live Music",
+      "free": true,
+      "url": "https://hillsidehillsborough.co.uk"
+    },
+
+  {
+  "id": "down-2026-01-12-quiz-night",
+  "title": "Hillside Monday Night Pub Quiz",
+  "summary": "Weekly quiz night with prizes.",
+  "description": "Test your extensive general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
+  "start": "2026-01-12T20:30:00",
+  "end": "2026-01-12T22:30:00",
+  "county": "Down",
+  "town": "Hillsborough",
+  "venue": "The Hillside Pub",
+  "category": "Quiz",
+  "free": true,
+  "contact": "Gerry on 0789998888",
+  "url": "https://hillsidehillsborough.co.uk"
+},
+
+{
+  "id": "down-2026-01-07-trad-session",
+  "title": "Hillside Traditional Music Session",
+  "summary": "Live weekly Irish traditional music session.",
+  "description": "An open traditional music session featuring local musicians. All welcome.",
+  "start": "2026-01-07T20:30:00",
+  "end": "2026-01-07T22:30:00",
+  "county": "Down",
+  "town": "Hillsborough",
+  "venue": "Hillside Pub",
+  "category": "Traditional Music",
+  "free": true,
+  "url": "https://hillsidehillsborough.co.uk"
+},
+      
+{
+      "id": "antrim-2026-01-25-market",
+      "title": "Weekend Craft & Food Market",
+      "summary": "Local makers, street food and hot drinks.",
+      "description": "Browse handmade gifts and grab a bite from local traders. Dogs welcome (on lead).",
+      "start": "2026-01-25T10:00:00",
+      "end": "2026-01-25T15:00:00",
+      "county": "Antrim",
+      "town": "Belfast",
+      "venue": "Market Hall",
+      "category": "Markets",
+      "free": true,
+      "url": "https://example.com"
+    }, 
+
+{
+  "id":"armagh-2026-01-29-MaggieMenopause",
+  "title": "Maggies Menopause",
+  "summary": "Hilarious play about Maggies trevails.",
+  "description": "Comedy",
+  "start":"2026-01-29T20:00:00",
+  "end":"2026-01-29T22:30:00",
+  "county": "Armagh",
+  "town": "Armagh City",
+  "venue": "Armagh Market Place Theatre",
+  "category":"Theatre",
+  "free": false
+},
+
+{
+  "id": "down-2026-01-07-leapoges-night",
+  "title": "Rachel Cairns tries to be nice - for one day",
+  "summary": "Rachel decides to test herself and see if she can go one day without rolling her eyes 🙄.",
+  "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
+  "start": "2026-01-07T09:30:00",
+  "end": "2026-01-07T22:30:00",
+  "county": "Down",
+  "town": "Leapoges",
+  "venue": "Banbridge and Lagangreen",
+  "category": "Be Nice to Funcles",
+  "free": true,
+  "contact": "Larry on 0789998888"
+},
+
+{
+  "id": "dirtyonion-2026-01-09-livemusicnight",
+  "title": "Friday Night Dirty Onion Livc",
+  "summary": "KARL BEARE 5:30PM”,
+  "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
+  "start": "2026-01:09T17:30:00",
+  "end": "2026-01-10T00:30:00",
+  "county": "Antrim",
+  "town": "Belfast",
+  "venue": "The Dirty Onion”,     “category": "Live Music",
+  "free": true,
+  "contact": "Gerry on 0789998888"
+}
+  ]
+}
