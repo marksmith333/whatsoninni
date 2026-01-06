@@ -98,6 +98,21 @@
       "free": true,
       "contact": "Gerry on 0789998888",
       "url": "https://thedirtyonion.com/whats-on"
-    }
+    },
+    {
+  "id": "down-2026-01-08-ploughquiz-night",
+  "title": "Thursday Night Pub Quiz",
+  "summary": "Weekly quiz night with prizes.",
+  "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
+  "start": "2026-01-08T21:00:00",
+  "end": "2026-01-08T22:30:00",
+  "county": "Down",
+  "town": "Hillsborough",
+  "venue": "The Plough Inn",
+  "category": "Quiz",
+  "free": true,
+  "url": "https://theploughhillsborough.co.uk/entertainment/"
+}
+    
   ]
 }
