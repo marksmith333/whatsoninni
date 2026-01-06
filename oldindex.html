@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pubs NI — pubsni.com</title>
+  <meta name="description" content="Upcoming events across Northern Ireland, organised by county." />
+  <link rel="stylesheet" href="assets/style.css?v=1004" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="pubsni">
+  <link rel="apple-touch-icon" href="/icons/pubsniicon.PNG">
+
+  <script src="/pwa.js" defer></script>
+</head>
+
+<body data-page="home" data-county="">
+  <div class="header">
+    <div class="container nav">
+      <div class="brand">
+        <b><a href="index.html">pubsni.com</a></b>
+        <span>All Counties</span>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <br><br>
+        <a href="antrim.html">Antrim</a>
+        <a href="armagh.html">Armagh</a>
+        <a href="derry.html">Derry</a>
+        <a href="down.html">Down</a>
+        <a href="fermanagh.html">Fermanagh</a>
+        <a href="tyrone.html">Tyrone</a>
+        <br><br>
+        <div><a href="submit.html">Submit event</a>
+        <a href="contact.html">Contact</a></div>
+      </div>
+
+      <div class="nav-icon">
+  <img src="icons/pubsniicon.PNG" alt="PubsNI">
+</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Events in Northern Ireland</h1>
+      <p>Your pocket guide to pub live music and quizzes plus other events happening across Northern Ireland.</p>
+    </div>
+
+    <div class="panel">
+      <div class="grid">
+        <div class="col-12">
+          <input id="search" class="input" placeholder="Search events (e.g., quiz, trad, Belfast, Omagh…)" />
+        </div>
+
+        <div class="col-6">
+          <select id="category"></select>
+        </div>
+
+        <div class="col-6">
+          <select id="dateFilter">
+            <option value="all">Any date</option>
+            <option value="today">Today</option>
+            <option value="weekend">This weekend</option>
+            <option value="month">Next 30 days</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="small" id="resultsCount">Loading…</div>
+      <div class="cards" id="eventCards"></div>
+    </div>
+
+    <div class="panel">
+      <h2 style="margin:0 0 8px 0">Browse counties</h2>
+      <div class="county-tiles">
+        <a class="tile" href="antrim.html"><b>Antrim</b><span>View events in Antrim</span></a>
+        <a class="tile" href="armagh.html"><b>Armagh</b><span>View events in Armagh</span></a>
+        <a class="tile" href="derry.html"><b>Derry</b><span>View events in Derry</span></a>
+        <a class="tile" href="down.html"><b>Down</b><span>View events in Down</span></a>
+        <a class="tile" href="fermanagh.html"><b>Fermanagh</b><span>View events in Fermanagh</span></a>
+        <a class="tile" href="tyrone.html"><b>Tyrone</b><span>View events in Tyrone</span></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        © <span id="y"></span> pubsni.com ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
