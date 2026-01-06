@@ -17,7 +17,10 @@ const categoryEmojis = {
   "Traditional Music": "🎻",
   "Music": "🎵",
   "Quiz": "❓",
-  "Family": "👶"
+  "Family": "👶",
+  "Live Music": "🎸",
+  "Markets": "🍰",
+  "Theatre": "🎭"
 };
 
 function qs(sel){ return document.querySelector(sel); }
