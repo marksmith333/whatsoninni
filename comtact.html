@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — pubsni.com</title>
+  <meta name="description" content="Contact pubsni.com for questions, corrections or event submissions." />
+
+  <link rel="stylesheet" href="assets/style.css?v=1004" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Pubs NI" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+  <script src="/pwa.js" defer></script>
+</head>
+
+<body>
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Pubs NI home">
+        <b>pubsni.com</b>
+        <span class="brand-subtitle">Contact</span>
+      </a>
+
+      <a class="nav-icon-link" href="index.html" aria-label="Pubs NI">
+        <img class="nav-icon" src="icons/pubsniicon.PNG" alt="Pubs NI" />
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-home">Home</a>
+
+        <div class="nav-counties" role="list" aria-label="Counties">
+          <a role="listitem" href="antrim.html">Antrim</a>
+          <a role="listitem" href="armagh.html">Armagh</a>
+          <a role="listitem" href="derry.html">Derry</a>
+          <a role="listitem" href="down.html">Down</a>
+          <a role="listitem" href="fermanagh.html">Fermanagh</a>
+          <a role="listitem" href="tyrone.html">Tyrone</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="submit.html">Submit event</a>
+          <a class="btn btn-primary" href="contact.html" aria-current="page">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Page content -->
+    <section class="page-head">
+      <h1>Contact</h1>
+      <p class="muted">
+        Questions, corrections, or event submissions.
+      </p>
+    </section>
+
+    <section class="panel">
+      <p>
+        The easiest way to get in touch is by email.
+      </p>
+
+      <a class="btn btn-primary" href="mailto:marksmith33@yahoo.com">
+        Email us
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="muted">
+          © <span id="year"></span> pubsni.com
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById("year");
+      if (el) el.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
