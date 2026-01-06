@@ -117,10 +117,11 @@ button, input, select{ font:inherit; }
 }
 
 .brand b{
-  font-size: 22px;              /* was 18px */
+  font-size: 28px;              /* was 18px */
   font-weight: 900;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.6px;
   color: var(--accent2);        /* blue brand emphasis */
+  line-height: 1.05; 
   position: relative;
 }
 
@@ -128,11 +129,11 @@ button, input, select{ font:inherit; }
 .brand b::after{
   content: "";
   display: block;
-  width: 36px;
-  height: 3px;
+  width: 48px;
+  height: 4px;
   background: var(--accent);
-  border-radius: 2px;
-  margin-top: 4px;
+  border-radius: 3px;
+  margin-top: 6px;
 }
 
 .brand-subtitle{
