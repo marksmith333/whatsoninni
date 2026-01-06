@@ -85,7 +85,7 @@ function withinDateFilter(ev, filter){
   if (isNaN(start)) return true;
 
   const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // local midnight
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   if (filter === "today"){
     const tomorrow = new Date(today);
@@ -93,22 +93,21 @@ function withinDateFilter(ev, filter){
     return start >= today && start < tomorrow;
   }
 
-  // Weekend = Friday, Saturday, Sunday
-  // Range is: Friday 00:00 through Monday 00:00
   if (filter === "weekend"){
-    const day = today.getDay(); // 0 Sun .. 6 Sat
-
-    // days until Friday (or 0 if already Friday)
-    const toFri = (5 - day + 7) % 7;
-
-    const fri = new Date(today);
-    fri.setDate(today.getDate() + toFri);
-
-    const mon = new Date(fri);
-    mon.setDate(fri.getDate() + 3);
-
-    return start >= fri && start < mon;
+    const day = now.getDay(); // 0 Sun .. 6 Sat
+    const toSat = (6 - day + 7) % 7;
+    const sat = new Date(today);
+    sat.setDate(today.getDate() + toSat);
+    const mon = new Date(sat);
+    mon.setDate(sat.getDate() + 2);
+    return start >= sat && start < mon;
   }
+
+  function isWeekendEvent(dateStr) {
+  const d = new Date(dateStr);
+  const day = d.getDay(); // 0 = Sun, 5 = Fri, 6 = Sat
+  return day === 5 || day === 6 || day === 0;
+}
 
   if (filter === "month"){
     const end = new Date(today);
