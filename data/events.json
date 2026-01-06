@@ -15,20 +15,6 @@
       "url": "https://example.com"
     },
     {
-      "id": "down-2026-01-18-family-walk",
-      "title": "Family Nature Walk",
-      "summary": "Guided walk suitable for kids.",
-      "description": "A relaxed guided walk with nature facts and mini activities for children. Wrap up warm!",
-      "start": "2026-01-18T11:00:00",
-      "end": "2026-01-18T12:30:00",
-      "county": "Down",
-      "town": "Hillsborough",
-      "venue": "Forest Park Entrance",
-      "category": "Family",
-      "free": true,
-      "url": "https://example.com"
-    },
-        {
       "id": "down-2026-01-09-hillsideMusic",
       "title": "Friday night music",
       "summary": "Call in for some Friday night live music",
@@ -42,7 +28,7 @@
       "free": true
     },
 
-    {
+  {
   "id": "down-2026-01-12-quiz-night",
   "title": "Monday Night Pub Quiz",
   "summary": "Weekly quiz night with prizes.",
@@ -71,7 +57,7 @@
   "free": true
 },
       
-    {
+{
       "id": "antrim-2026-01-25-market",
       "title": "Weekend Craft & Food Market",
       "summary": "Local makers, street food and hot drinks.",
@@ -86,7 +72,7 @@
       "url": "https://example.com"
     }, 
 
-  {
+{
   "id":"armagh-2026-01-29-MaggieMenopause",
   "title": "Maggies Menopause",
   "summary": "Hilarious play about Maggies trevails.",
@@ -98,34 +84,6 @@
   "venue": "Armagh Market Place Theatre",
   "category":"Theatre",
   "free": false
-}, 
-{
-  "id": "fermanagh-2026-01-25-quinn-matt",
-  "title": "Matthew Quinn Homecoming",
-  "summary": "The village is awaiting Matthew's returm with baited breath.",
-  "description": "Come down and say hi to Matthew.",
-  "start": "2026-01-25T20:30:00",
-  "end": "2026-01-26T22:30:00",
-  "county": "Fermanagh",
-  "town": "Derrylin",
-  "venue": "The keys to the town.",
-  "category": "Homecoming",
-  "free": true,
-  "contact": "Be there."
-},
-{
-  "id": "tyrone-2026-01-25-titan-night",
-  "title": "Titan arrives home.",
-  "summary": "Come meet Titan and marvel at his aura.",
-  "description": "Test your manliness against the ultimate stallion.",
-  "start": "2026-01-25T20:30:00",
-  "end": "2026-01-25T22:30:00",
-  "county": "Tyrone",
-  "town": "Omagh",
-  "venue": "Townview",
-  "category": "Quiz",
-  "free": true,
-  "contact": "Ray on 0789998888"
 },
 
 {
@@ -141,20 +99,6 @@
   "category": "Be Nice to Funcles",
   "free": true,
   "contact": "Larry on 0789998888"
-},
-{
-  "id": "antrim-2026-01-09-mccarthy-mortgagepaid",
-  "title": "Chris McCarthy becomes mortgage free.",
-  "summary":"He's free to do what he wants, any old time.",
-  "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
-  "start": "2026-01-09T20:30:00",
-  "end": "2026-01-09T22:30:00",
-  "county": "Antrim",
-  "town": "Belfast",
-  "venue": "River Cottage",
-  "category": "Freedom",
-  "free": true,
-  "contact": "Gerry on 0789998888"
 }
   ]
 }
