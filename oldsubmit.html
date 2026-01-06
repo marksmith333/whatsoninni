@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit an event — pubsni.com</title>
+  <link rel="stylesheet" href="assets/style.css?v=1004" />
+  <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pubs NI">
+<link rel="apple-touch-icon" href="/icons/pubsniicon.PNG">
+
+<script src="/pwa.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <div class="container nav">
+      <div class="brand">
+        <b><a href="index.html">pubsni.com</a></b>
+        <span>Submit an event</span>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Submit an event</h1>
+      <p>Send us the details and we’ll add it to the listings.</p>
+    </div>
+
+    <div class="panel">
+      <p class="notice">
+        Submissions are received by email and updated immediately.
+      </p>
+
+      <div class="hr"></div>
+
+      <p>
+        <a class="btn" href="mailto:marksmith33@yahoo.com?subject=Event%20submission%20for%20pubsni.com&body=Title:%0D%0ADate%20%26%20time:%0D%0ACounty%20(Antrim/Armagh/Derry/Down/Fermanagh/Tyrone):%0D%0ATown:%0D%0AVenue:%0D%0ACategory:%0D%0APrice%20(or%20Free):%0D%0AWebsite%20link:%0D%0ADescription:%0D%0A"></a>
+        Email us your event submission
+        </a>
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> pubsni.com · <a href="privacy.html">Privacy</a></div>
+    </div>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

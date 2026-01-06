@@ -4,55 +4,174 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Submit an event — pubsni.com</title>
+  <meta name="description" content="Submit an event to pubsni.com for listing across Northern Ireland." />
+
   <link rel="stylesheet" href="assets/style.css?v=1004" />
-  <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Pubs NI">
-<link rel="apple-touch-icon" href="/icons/pubsniicon.PNG">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Pubs NI" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
-<script src="/pwa.js" defer></script>
+  <script src="/pwa.js" defer></script>
 </head>
+
 <body>
-  <div class="header">
+  <!-- Header / Nav -->
+  <header class="header">
     <div class="container nav">
-      <div class="brand">
-        <b><a href="index.html">pubsni.com</a></b>
-        <span>Submit an event</span>
-      </div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
+      <a class="brand" href="index.html" aria-label="Pubs NI home">
+        <b>pubsni.com</b>
+        <span class="brand-subtitle">Submit an event</span>
+      </a>
 
-  <div class="container">
-    <div class="hero">
+      <a class="nav-icon-link" href="index.html" aria-label="Pubs NI">
+        <img class="nav-icon" src="icons/pubsniicon.PNG" alt="Pubs NI" />
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-home">Home</a>
+
+        <div class="nav-counties" role="list" aria-label="Counties">
+          <a role="listitem" href="antrim.html">Antrim</a>
+          <a role="listitem" href="armagh.html">Armagh</a>
+          <a role="listitem" href="derry.html">Derry</a>
+          <a role="listitem" href="down.html">Down</a>
+          <a role="listitem" href="fermanagh.html">Fermanagh</a>
+          <a role="listitem" href="tyrone.html">Tyrone</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="submit.html" aria-current="page">Submit event</a>
+          <a class="btn btn-primary" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Page head -->
+    <section class="page-head">
       <h1>Submit an event</h1>
-      <p>Send us the details and we’ll add it to the listings.</p>
-    </div>
-
-    <div class="panel">
-      <p class="notice">
-        Submissions are received by email and updated immediately.
+      <p class="muted">
+        Hosting something in Northern Ireland? Submit your event below and we’ll add it to pubsni.com.
       </p>
+    </section>
 
-      <div class="hr"></div>
+    <!-- Form -->
+    <section class="panel" aria-label="Submit event form">
+      <form action="mailto:marksmith33@yahoo.com" method="post" enctype="text/plain">
 
-      <p>
-        <a class="btn" href="mailto:marksmith33@yahoo.com?subject=Event%20submission%20for%20pubsni.com&body=Title:%0D%0ADate%20%26%20time:%0D%0ACounty%20(Antrim/Armagh/Derry/Down/Fermanagh/Tyrone):%0D%0ATown:%0D%0AVenue:%0D%0ACategory:%0D%0APrice%20(or%20Free):%0D%0AWebsite%20link:%0D%0ADescription:%0D%0A"></a>
-        Email us your event submission
-        </a>
-      </p>
-    </div>
+        <div class="filters">
+          <label class="search">
+            <span>Event title</span>
+            <input type="text" name="title" required placeholder="e.g. Live music night" />
+          </label>
 
-    <div class="footer">
-      <div>© <span id="y"></span> pubsni.com · <a href="privacy.html">Privacy</a></div>
-    </div>
-  </div>
+          <label class="select">
+            <span>Category</span>
+            <select name="category" required>
+              <option value="">Select category</option>
+              <option>Traditional Music</option>
+              <option>Music</option>
+              <option>Quiz</option>
+              <option>Family</option>
+              <option>Other</option>
+            </select>
+          </label>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+          <label class="select">
+            <span>County</span>
+            <select name="county" required>
+              <option value="">Select county</option>
+              <option>Antrim</option>
+              <option>Armagh</option>
+              <option>Derry</option>
+              <option>Down</option>
+              <option>Fermanagh</option>
+              <option>Tyrone</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filters">
+          <label class="search">
+            <span>Venue</span>
+            <input type="text" name="venue" placeholder="Venue name" />
+          </label>
+
+          <label class="search">
+            <span>Town / Area</span>
+            <input type="text" name="town" placeholder="Town or area" />
+          </label>
+        </div>
+
+        <div class="filters">
+          <label class="search">
+            <span>Start date & time</span>
+            <input type="datetime-local" name="start" required />
+          </label>
+
+          <label class="search">
+            <span>End date & time (optional)</span>
+            <input type="datetime-local" name="end" />
+          </label>
+
+          <label class="select">
+            <span>Price</span>
+            <select name="price">
+              <option value="">Select</option>
+              <option>Free</option>
+              <option>£5</option>
+              <option>£10</option>
+              <option>£15+</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="search">
+          <span>Short description</span>
+          <textarea name="summary" rows="3" placeholder="One or two sentences about the event"></textarea>
+        </label>
+
+        <label class="search">
+          <span>More details (optional)</span>
+          <textarea name="description" rows="5" placeholder="Any extra information"></textarea>
+        </label>
+
+        <label class="search">
+          <span>Website / ticket link (optional)</span>
+          <input type="url" name="url" placeholder="https://…" />
+        </label>
+
+        <div class="nav-actions" style="margin-top:16px">
+          <button type="submit" class="btn btn-primary">Submit event</button>
+          <a href="index.html" class="btn btn-ghost">Cancel</a>
+        </div>
+
+        <p class="muted" style="margin-top:12px">
+          Submissions are reviewed before appearing on the site.
+        </p>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="muted">
+          © <span id="year"></span> pubsni.com ·
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById("year");
+      if (el) el.textContent = String(new Date().getFullYear());
+    })();
+  </script>
 </body>
 </html>
