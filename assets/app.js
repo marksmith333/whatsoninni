@@ -19,7 +19,8 @@ const categoryEmojis = {
   "Quiz": "❓",
   "Family": "👶",
   "Live Music": "🎸",
-  "Markets": "🍰"
+  "Markets": "🍰",
+  "Theatre": "🎭"
 };
 
 function qs(sel){ return document.querySelector(sel); }
