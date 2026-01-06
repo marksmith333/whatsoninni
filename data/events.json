@@ -16,7 +16,7 @@
     },
     {
       "id": "down-2026-01-09-hillsideMusic",
-      "title": "Friday night music",
+      "title": "Hillside Friday night music",
       "summary": "Call in for some Friday night live music",
       "description": "Music",
       "start": "2026-01-09T21:00:00",
@@ -25,12 +25,13 @@
       "town": "Hillsborough",
       "venue": "Main Street",
       "category": "Live Music",
-      "free": true
+      "free": true,
+      "url": "https://hillsidehillsborough.co.uk"
     },
 
   {
   "id": "down-2026-01-12-quiz-night",
-  "title": "Monday Night Pub Quiz",
+  "title": "Hillside Monday Night Pub Quiz",
   "summary": "Weekly quiz night with prizes.",
   "description": "Test your extensive general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
   "start": "2026-01-12T20:30:00",
@@ -40,12 +41,13 @@
   "venue": "The Hillside Pub",
   "category": "Quiz",
   "free": true,
-  "contact": "Gerry on 0789998888"
+  "contact": "Gerry on 0789998888",
+  "url": "https://hillsidehillsborough.co.uk"
 },
 
 {
   "id": "down-2026-01-07-trad-session",
-  "title": "Traditional Music Session",
+  "title": "Hillside Traditional Music Session",
   "summary": "Live weekly Irish traditional music session.",
   "description": "An open traditional music session featuring local musicians. All welcome.",
   "start": "2026-01-07T20:30:00",
@@ -54,7 +56,8 @@
   "town": "Hillsborough",
   "venue": "Hillside Pub",
   "category": "Traditional Music",
-  "free": true
+  "free": true,
+  "url": "https://hillsidehillsborough.co.uk"
 },
       
 {
