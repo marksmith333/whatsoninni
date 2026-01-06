@@ -39,7 +39,7 @@ body{
     url("../images/pint.png");
   background-repeat: no-repeat;
   background-position: right 28px top 120px;
-  background-size: 420px auto;
+  background-size: 560px auto;
 
   /* required for faded logo overlay */
   position: relative;
@@ -476,7 +476,7 @@ button, input, select{ font:inherit; }
 @media (max-width: 720px){
   body{
     background-position: right -40px top 140px;
-    background-size: 320px auto;
+    background-size: 400px auto;
   }
 
   .filters{
