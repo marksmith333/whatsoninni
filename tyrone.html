@@ -3,102 +3,117 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fermanagh events — pubsni.com</title>
+  <title>Tyrone events — pubsni.com</title>
   <meta name="description" content="Upcoming events in County Tyrone, Northern Ireland." />
+
   <link rel="stylesheet" href="assets/style.css?v=1004" />
-  <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Pubs NI">
-<link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Pubs NI" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
-<script src="/pwa.js" defer></script>
+  <script src="/pwa.js" defer></script>
+  <script src="assets/app.js?v=1004" defer></script>
 </head>
 
 <body data-page="county" data-county="Tyrone">
-  <div class="header">
+  <!-- Header / Nav -->
+  <header class="header">
     <div class="container nav">
-      <div class="brand">
-        <b><a href="index.html">pubsni.com</a></b>
-        <span>County Tyrone</span>
-      </div>
+      <a class="brand" href="index.html" aria-label="Pubs NI home">
+        <b>pubsni.com</b>
+        <span class="brand-subtitle">County Tyrone</span>
+      </a>
 
-      <div class="links">
-        <a href="index.html">Home</a>
-        <br><br>
-        <a href="antrim.html">Antrim</a>
-        <a href="armagh.html">Armagh</a>
-        <a href="derry.html">Derry</a>
-        <a href="down.html">Down</a>
-        <a href="fermanagh.html">Fermanagh</a>
-        <a href="tyrone.html">Tyrone</a>
-        <br><br>
-        <div><a href="submit.html">Submit event</a>
-        <a href="contact.html">Contact</a></div>
-      </div>
+      <a class="nav-icon-link" href="index.html" aria-label="Pubs NI">
+        <img class="nav-icon" src="icons/pubsniicon.PNG" alt="Pubs NI" />
+      </a>
 
-      <!-- Top-right pint icon -->
-    <div class="nav-icon">
-      <img src="/icons/pubsniicon.PNG" alt="PubsNI">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-home">Home</a>
+
+        <div class="nav-counties" role="list" aria-label="Counties">
+          <a role="listitem" href="antrim.html">Antrim</a>
+          <a role="listitem" href="armagh.html">Armagh</a>
+          <a role="listitem" href="derry.html">Derry</a>
+          <a role="listitem" href="down.html">Down</a>
+          <a role="listitem" href="fermanagh.html">Fermanagh</a>
+          <a role="listitem" href="tyrone.html" aria-current="page">Tyrone</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="submit.html">Submit event</a>
+          <a class="btn btn-primary" href="contact.html">Contact</a>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="hero">
+  <main class="container">
+    <!-- Page title / meta row -->
+    <section class="page-head">
       <h1>Events in Tyrone</h1>
-      <p>Upcoming events across County Tyrone.</p>
-    </div>
+      <p class="muted">Upcoming events across County Tyrone, Northern Ireland.</p>
+    </section>
 
-    <div class="panel">
-      <div class="grid">
-        <div class="col-12">
-          <input id="search" class="input" placeholder="Search Tyrone events (e.g., Omagh, Strabane, market…)" />
-        </div>
+    <!-- Filters (app.js will hook into these if you use them) -->
+    <section class="filters" aria-label="Filters">
+      <label class="search">
+        <span class="sr-only">Search events</span>
+        <input id="search" type="search" placeholder="Search events…" autocomplete="off" />
+      </label>
 
-        <div class="col-6">
-          <select id="category"></select>
-        </div>
+      <label class="select">
+        <span class="sr-only">Filter by category</span>
+        <select id="category">
+          <option value="">All categories</option>
+          <option value="Traditional Music">🎻 Traditional Music</option>
+          <option value="Music">🎵 Music</option>
+          <option value="Quiz">❓ Quiz</option>
+          <option value="Family">👶 Family</option>
+        </select>
+      </label>
+    </section>
 
-        <div class="col-6">
-          <select id="dateFilter">
-            <option value="all">Any date</option>
-            <option value="today">Today</option>
-            <option value="weekend">This weekend</option>
-            <option value="month">Next 30 days</option>
-          </select>
-        </div>
+    <!-- Events list (app.js writes into this container) -->
+    <section aria-label="Event results">
+      <div id="events" class="cards"></div>
+      <p id="empty" class="muted" style="display:none;">No events found.</p>
+    </section>
+
+    <!-- Browse other counties -->
+    <section class="browse" aria-label="Browse other counties">
+      <h2>Browse other counties</h2>
+      <div class="chips">
+        <a class="chip" href="antrim.html">Antrim</a>
+        <a class="chip" href="armagh.html">Armagh</a>
+        <a class="chip" href="derry.html">Derry</a>
+        <a class="chip" href="down.html">Down</a>
+        <a class="chip" href="fermanagh.html">Fermanagh</a>
+        <a class="chip" href="tyrone.html" aria-current="page">Tyrone</a>
       </div>
+    </section>
 
-      <div class="hr"></div>
-
-      <div class="small" id="resultsCount">Loading…</div>
-      <div class="cards" id="eventCards"></div>
-    </div>
-
-    <div class="panel">
-      <h2 style="margin:0 0 8px 0">Browse other counties</h2>
-      <div class="county-tiles">
-        <a class="tile" href="antrim.html"><b>Antrim</b><span>View events in Antrim</span></a>
-        <a class="tile" href="armagh.html"><b>Armagh</b><span>View events in Armagh</span></a>
-        <a class="tile" href="derry.html"><b>Derry</b><span>View events in Derry</span></a>
-        <a class="tile" href="down.html"><b>Down</b><span>View events in Down</span></a>
-        <a class="tile" href="fermanagh.html"><b>Fermanagh</b><span>View events in Tyrone</span></a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="muted">
+          © <span id="year"></span> pubsni.com ·
+          <a href="submit.html">Submit an event</a> ·
+          <a href="contact.html">Contact</a>
+        </p>
       </div>
-    </div>
+    </footer>
+  </main>
 
-    <div class="footer">
-      <div>
-        © <span id="y"></span> pubsni.com ·
-        <a href="privacy.html">Privacy</a> ·
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  <script src="assets/app.js"></script>
+  <script>
+    // tiny footer year helper (safe even if JS is disabled elsewhere)
+    (function () {
+      var el = document.getElementById("year");
+      if (el) el.textContent = String(new Date().getFullYear());
+    })();
+  </script>
 </body>
 </html>

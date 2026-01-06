@@ -1,0 +1,279 @@
+/* =========================
+   ROOT + RESET
+========================= */
+
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e5e7eb;
+  --accent:#2563eb;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.4;
+}
+
+/* =========================
+   HEADER / BRAND
+========================= */
+
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px 6px;
+}
+
+.brand{
+  text-decoration:none;
+  color:inherit;
+}
+
+.brand-name{
+  font-size:20px;
+  font-weight:800;
+  color:var(--accent);
+}
+
+.brand-sub{
+  display:block;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.site-icon{
+  width:28px;
+  height:28px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.main-nav{
+  padding:6px 16px 12px;
+}
+
+.main-nav a{
+  text-decoration:none;
+  font-weight:600;
+  color:var(--accent);
+  margin-right:12px;
+  white-space:nowrap;
+}
+
+.main-nav a[aria-current="page"]{
+  text-decoration:underline;
+}
+
+/* secondary row: Submit + Contact */
+.nav-secondary{
+  display:flex;
+  gap:14px;
+  margin-top:6px;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.container{
+  padding:16px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.page-hero h1{
+  font-size:32px;
+  margin:10px 0 4px;
+}
+
+.page-hero p{
+  margin:0 0 14px;
+  color:var(--muted);
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+  display:grid;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.input,
+.select{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  font-size:16px;
+}
+
+/* =========================
+   CARDS / EVENTS
+========================= */
+
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:14px;
+  border:1px solid var(--border);
+}
+
+.results-count{
+  margin-bottom:10px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.events-list{
+  display:grid;
+  gap:14px;
+}
+
+.event-card{
+  background:#fff;
+  border-radius:14px;
+  padding:14px;
+  border:1px solid var(--border);
+}
+
+.event-tags{
+  display:flex;
+  gap:8px;
+  margin-bottom:6px;
+  flex-wrap:wrap;
+}
+
+.tag{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.tag-county{ background:#e0ecff; color:#1d4ed8; }
+.tag-category{ background:#dcfce7; color:#166534; }
+.tag-free{ background:#f1f5f9; color:#334155; }
+
+.event-title{
+  font-size:20px;
+  font-weight:800;
+  margin:6px 0;
+}
+
+.event-meta{
+  color:var(--muted);
+  font-size:15px;
+}
+
+.event-desc{
+  margin-top:6px;
+  color:#334155;
+}
+
+/* =========================
+   SPONSOR
+========================= */
+
+.county-sponsor{
+  margin:16px 0;
+  text-align:center;
+}
+
+.sponsor-label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.county-sponsor img{
+  max-width:200px;
+  height:auto;
+}
+
+/* =========================
+   BROWSE OTHER COUNTIES
+========================= */
+
+.browse-counties{
+  margin:26px 0 12px;
+}
+
+.browse-counties h2{
+  margin:0 0 10px;
+  font-size:24px;
+}
+
+.county-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.county-links a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#f1f5f9;
+  border:1px solid var(--border);
+  font-weight:700;
+  text-decoration:none;
+  color:#0f172a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  margin-top:30px;
+  padding:16px;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:var(--muted);
+}
+
+.site-footer a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* =========================
+   MOBILE POLISH
+========================= */
+
+@media (max-width:480px){
+  .page-hero h1{
+    font-size:28px;
+  }
+
+  .brand-name{
+    font-size:18px;
+  }
+}
