@@ -99,4 +99,27 @@
         <a class="chip" href="derry.html">Derry</a>
         <a class="chip" href="down.html">Down</a>
         <a class="chip" href="fermanagh.html">Fermanagh</a>
-        <a class="chip" href="tyrone.html" aria-current="page
+                <a class="chip" href="tyrone.html" aria-current="page">Tyrone</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="muted">
+          © <span id="year"></span> pubsni.com ·
+          <a href="submit.html">Submit an event</a> ·
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById("year");
+      if (el) el.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
