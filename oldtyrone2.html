@@ -56,10 +56,9 @@
     <section class="page-head">
       <h1>Events in Tyrone</h1>
       <p class="muted">Upcoming events across County Tyrone, Northern Ireland.</p>
-      <p id="resultsCount" class="muted" style="margin:8px 0 0 0;"></p>
     </section>
 
-    <!-- Filters (IDs must match app.js) -->
+    <!-- Filters -->
     <section class="filters" aria-label="Filters">
       <label class="search">
         <span class="sr-only">Search events</span>
@@ -68,10 +67,12 @@
 
       <label class="select">
         <span class="sr-only">Filter by date</span>
-        <select id="dateFilter">
-          <option value="all">All dates</option>
+        <select id="date">
+          <option value="">All dates</option>
           <option value="today">Today</option>
           <option value="weekend">This weekend</option>
+          <option value="week">This week</option>
+          <option value="7days">Next 7 days</option>
           <option value="month">This month</option>
         </select>
       </label>
@@ -79,15 +80,19 @@
       <label class="select">
         <span class="sr-only">Filter by category</span>
         <select id="category">
-          <!-- app.js will populate this dynamically from events.json -->
-          <option value="all">All categories</option>
+          <option value="">All categories</option>
+          <option value="Traditional Music">🎻 Traditional Music</option>
+          <option value="Music">🎵 Music</option>
+          <option value="Quiz">❓ Quiz</option>
+          <option value="Family">👶 Family</option>
         </select>
       </label>
     </section>
 
-    <!-- Events list (ID must match app.js) -->
+    <!-- Events list (app.js writes into this container) -->
     <section aria-label="Event results">
-      <div id="eventCards" class="cards"></div>
+      <div id="events" class="cards"></div>
+      <p id="empty" class="muted" style="display:none;">No events found.</p>
     </section>
 
     <!-- Browse other counties -->
@@ -99,4 +104,28 @@
         <a class="chip" href="derry.html">Derry</a>
         <a class="chip" href="down.html">Down</a>
         <a class="chip" href="fermanagh.html">Fermanagh</a>
-        <a class="chip" href="tyrone.html" aria-current="page
+        <a class="chip" href="tyrone.html" aria-current="page">Tyrone</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="muted">
+          © <span id="year"></span> pubsni.com ·
+          <a href="submit.html">Submit an event</a> ·
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // tiny footer year helper (safe even if JS is disabled elsewhere)
+    (function () {
+      var el = document.getElementById("year");
+      if (el) el.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
