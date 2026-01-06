@@ -10,7 +10,7 @@
       "county": "Derry",
       "town": "Derry/Londonderry",
       "venue": "City Centre Pub",
-      "category": "Music",
+      "category": "Traditional Music",
       "free": true,
       "url": "https://example.com"
     },
@@ -29,12 +29,12 @@
       "url": "https://example.com"
     },
         {
-      "id": "down-2026-01-02-hillsideMusic",
+      "id": "down-2026-01-09-hillsideMusic",
       "title": "Friday night music",
       "summary": "Music to wash away the new year blues.",
       "description": "Music",
-      "start": "2026-01-02T21:00:00",
-      "end": "2026-01-02T23:00:00",
+      "start": "2026-01-09T21:00:00",
+      "end": "2026-01-09T23:00:00",
       "county": "Down",
       "town": "Hillsborough",
       "venue": "Main Street",
@@ -43,12 +43,12 @@
     },
 
     {
-  "id": "down-2026-01-05-quiz-night",
+  "id": "down-2026-01-12-quiz-night",
   "title": "Monday Night Pub Quiz",
   "summary": "Weekly quiz night with prizes.",
   "description": "Test your extensive general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
-  "start": "2026-01-05T20:30:00",
-  "end": "2026-01-05T22:30:00",
+  "start": "2026-01-12T20:30:00",
+  "end": "2026-01-12T22:30:00",
   "county": "Down",
   "town": "Hillsborough",
   "venue": "The Hillside Pub",
