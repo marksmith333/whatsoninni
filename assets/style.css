@@ -116,11 +116,30 @@ button, input, select{ font:inherit; }
   line-height: 1.1;
 }
 
-.brand b{ font-size: 18px; letter-spacing:0.2px; }
+.brand b{
+  font-size: 22px;              /* was 18px */
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  color: var(--accent2);        /* blue brand emphasis */
+  position: relative;
+}
+
+/* subtle underline accent */
+.brand b::after{
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
 .brand-subtitle{
   font-size: 13px;
+  font-weight: 600;
   color: var(--muted);
-  margin-top: 3px;
+  margin-top: 6px;
 }
 
 .nav-icon-link{
