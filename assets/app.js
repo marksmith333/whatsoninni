@@ -103,6 +103,12 @@ function withinDateFilter(ev, filter){
     return start >= sat && start < mon;
   }
 
+  function isWeekendEvent(dateStr) {
+  const d = new Date(dateStr);
+  const day = d.getDay(); // 0 = Sun, 5 = Fri, 6 = Sat
+  return day === 5 || day === 6 || day === 0;
+}
+
   if (filter === "month"){
     const end = new Date(today);
     end.setMonth(today.getMonth() + 1);
