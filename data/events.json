@@ -116,6 +116,21 @@
   "category": "Traditional Music",
   "free": true,
   "url": "https://whitestavernbelfast.com/tavern/"
+},
+
+{
+  "id": "armagh-2026-01-09-canalcourt-tradnight",
+  "title": "Friday Night Live Music",
+  "summary": "Weekly trad session beside the fire.",
+  "description": "Live Music from Stephen Murphy.",
+  "start": "2026-01-09T21:00:00",
+  "end": "2026-01-09T23:00:00",
+  "county": "Armagh",
+  "town": "Newry",
+  "venue": "Canal Court Hotel",
+  "category": "Traditional Music",
+  "free": true,
+  "url": ""
 }
     
   ]
