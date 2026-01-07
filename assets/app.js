@@ -266,7 +266,14 @@ async function initListingPage(defaultCounty=null){
   const listEl = qs("#eventCards");
   const searchEl = qs("#search");
   const catEl = qs("#category");
+
   const dateEl = qs("#dateFilter");
+
+  // ✅ Default date filter to "today" on load
+  if (dateEl && (!dateEl.value || dateEl.value === "all")) {
+    dateEl.value = "today";
+  }
+
   const tilesEl = qs("#countyTiles");
   const countEl = qs("#resultsCount");
 
