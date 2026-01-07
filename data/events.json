@@ -44,16 +44,16 @@
       "url": "https://hillsidehillsborough.co.uk"
     },
     {
-      "id": "down-2026-01-07-trad-session",
-      "title": "Hillside Traditional Music Session",
-      "summary": "Live weekly Irish traditional music session.",
-      "description": "An open traditional music session featuring local musicians. All welcome.",
+      "id": "down-2026-01-07-folk-night",
+      "title": "Hillside Folk Music Night",
+      "summary": "Live weekly Folk Music Night.",
+      "description": "An open Folk Music Night featuring local musicians. All welcome.",
       "start": "2026-01-07T20:30:00",
       "end": "2026-01-07T22:30:00",
       "county": "Down",
       "town": "Hillsborough",
       "venue": "Hillside Pub",
-      "category": "Traditional Music",
+      "category": "Folk Music",
       "free": true,
       "url": "https://hillsidehillsborough.co.uk"
     },
