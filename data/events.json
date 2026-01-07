@@ -161,6 +161,21 @@
   "category": "Paint your pet",
   "free": false,
   "url": "https://thelarklisburn.com/event/paint-your-pet-edition/"
+},
+
+{
+  "id": "Antrim-2026-01-09-thelansdowne-fridaymusic",
+  "title": "Lansdowne Live Music Fridays.",
+  "summary": "The Lansdowne presents Live Music Fridays.",
+  "description": "The Lansdowne presents Live Music Fridays.",
+  "start": "2026-01-09T19:00:00",
+  "end": "2026-01-09T21:00:00",
+  "county": "Antrim",
+  "town": "Belfast",
+  "venue": "The Lansdowne, 657 Antrim Road",
+  "category": "Live Music",
+  "free": true,
+  "url": "https://www.thelansdownehotel.co.uk/listen"
 }
     
   ]
