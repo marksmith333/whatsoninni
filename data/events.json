@@ -29,12 +29,12 @@
       "url": "https://hillsidehillsborough.co.uk"
     },
     {
-      "id": "down-2026-01-12-quiz-night",
+      "id": "down-2026-01-9-quiz-night",
       "title": "Hillside Monday Night Pub Quiz",
       "summary": "Weekly quiz night with prizes.",
       "description": "Test your extensive general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
-      "start": "2026-01-12T20:30:00",
-      "end": "2026-01-12T22:30:00",
+      "start": "2026-01-19T20:30:00",
+      "end": "2026-01-19T22:30:00",
       "county": "Down",
       "town": "Hillsborough",
       "venue": "The Hillside Pub",
@@ -44,12 +44,12 @@
       "url": "https://hillsidehillsborough.co.uk"
     },
     {
-      "id": "down-2026-01-07-folk-night",
+      "id": "down-2026-01-21folk-night",
       "title": "Hillside Folk Music Night",
       "summary": "Live weekly Folk Music Night.",
       "description": "An open Folk Music Night featuring local musicians. All welcome.",
-      "start": "2026-01-07T20:30:00",
-      "end": "2026-01-07T22:30:00",
+      "start": "2026-01-21T20:30:00",
+      "end": "2026-01-21T22:30:00",
       "county": "Down",
       "town": "Hillsborough",
       "venue": "Hillside Pub",
@@ -89,12 +89,12 @@
       "url": "https://thedirtyonion.com/whats-on"
     },
     {
-  "id": "down-2026-01-08-ploughquiz-night",
+  "id": "down-2026-01-22-ploughquiz-night",
   "title": "The famous weekly Thursday Night Plough Quiz",
   "summary": "Test your knowledge and usher in the weekend.",
   "description": "Test your general knowledge in a relaxed, friendly pub quiz. Teams welcome.",
-  "start": "2026-01-08T21:00:00",
-  "end": "2026-01-08T22:30:00",
+  "start": "2026-01-22T21:00:00",
+  "end": "2026-01-22T22:30:00",
   "county": "Down",
   "town": "Hillsborough",
   "venue": "The Plough Inn",
@@ -120,11 +120,11 @@
 
 {
   "id": "armagh-2026-01-09-canalcourt-tradnight",
-  "title": "Friday Night Live Music",
-  "summary": "Live Music with Stephen Murphy.",
+  "title": "Saturday Night Live Music",
+  "summary": "Live Bluegrass Music with Stephen Murphy.",
   "description": "Live Music from Stephen Murphy.",
-  "start": "2026-01-09T21:00:00",
-  "end": "2026-01-09T23:00:00",
+  "start": "2026-01-17T20:00:00",
+  "end": "2026-01-17T22:00:00",
   "county": "Armagh",
   "town": "Newry",
   "venue": "Canal Court Hotel",
